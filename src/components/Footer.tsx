@@ -63,7 +63,7 @@ const socials = [
 
 function SectionHeading({ label }: { label: string }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 20 }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 13 }}>
       <div style={{ width: 3, height: 14, background: GREEN, borderRadius: 2, flexShrink: 0 }} />
       <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: '#fff' }}>
         {label}
@@ -117,31 +117,31 @@ export function Footer() {
       <div style={{ height: 2, background: `linear-gradient(90deg, transparent, ${GREEN}, transparent)` }} />
 
       {/* ── Main grid ── */}
-      <div style={{ padding: 'clamp(56px,7vw,96px) clamp(24px,5vw,80px) 0', position: 'relative', zIndex: 1 }}>
+      <div style={{ padding: 'clamp(20px,2.5vw,32px) clamp(24px,5vw,80px) 0', position: 'relative', zIndex: 1 }}>
         <div
           className="footer-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1.8fr 1.1fr 1fr 1fr 1fr',
             gap: 'clamp(28px,3.5vw,52px)',
-            paddingBottom: 'clamp(52px,6vw,88px)',
+            paddingBottom: 'clamp(18px,2vw,28px)',
             alignItems: 'start',
           }}
         >
 
           {/* ── Brand column ── */}
           <div>
-            <a href="#" style={{ display: 'inline-block', lineHeight: 0, marginBottom: 20, marginLeft: '-6px' }}>
-              <img src="/images/BIVRY-white01.png" alt="BIVRY" style={{ height: 'clamp(78px, 7vw, 96px)', width: 'auto' }} />
+            <a href="#" style={{ display: 'inline-block', lineHeight: 0, marginBottom: 12, marginLeft: '-28px' }}>
+              <img src="/images/BIVRY-white01.png" alt="BIVRY" style={{ height: 'clamp(64px, 6vw, 80px)', width: 'auto' }} />
             </a>
 
-            <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.42)', lineHeight: 1.9, maxWidth: 270, marginBottom: 28 }}>
+            <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.42)', lineHeight: 1.7, maxWidth: 270, marginBottom: 16 }}>
               Premium road freight, warehousing and distribution across Australia.
               Reliable. Trackable. Trusted.
             </p>
 
             {/* Contact details */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginBottom: 16 }}>
               <a href="tel:1800054555" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: 13.5, color: 'rgba(255,255,255,0.55)', transition: 'color 0.16s ease', textDecoration: 'none' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.55)' }}
@@ -236,7 +236,7 @@ export function Footer() {
           {/* ── Services ── */}
           <div>
             <SectionHeading label="Services" />
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 13 }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
               {allServices.map(item => (
                 <li key={item.label}>
                   {item.serviceId ? (
@@ -260,7 +260,7 @@ export function Footer() {
           {/* ── Industries — all 10 ── */}
           <div>
             <SectionHeading label="Industries" />
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 13 }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
               {allIndustries.map(item => (
                 <li key={item.label}>
                   <FooterLink href={item.href}>{item.label}</FooterLink>
@@ -272,7 +272,7 @@ export function Footer() {
           {/* ── Why Us ── */}
           <div>
             <SectionHeading label="Why Us" />
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 13 }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
               {whyUsItems.map(item => (
                 <li key={item.label}>
                   <FooterLink href={item.href}>{item.label}</FooterLink>
@@ -284,7 +284,7 @@ export function Footer() {
           {/* ── Quick Links ── */}
           <div>
             <SectionHeading label="Quick Links" />
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 13 }}>
+            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
               {[
                 { label: 'About Us',       href: '/about'        },
                 { label: 'Careers',        href: '/careers'      },
@@ -304,6 +304,20 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Protected by — EG Digital shield (just above divider) */}
+        <div className="footer-protected" style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'flex-end', gap: 0, paddingBottom: 18 }}>
+          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', paddingBottom: 16, marginRight: -14 }}>
+            Protected by
+          </span>
+          <a href="https://egdigital.com.au/" target="_blank" rel="noopener noreferrer" aria-label="EG Digital"
+            style={{ display: 'inline-block', lineHeight: 0, opacity: 0.9, transition: 'opacity 0.18s ease, transform 0.24s ease' }}
+            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.opacity = '1'; el.style.transform = 'scale(1.05)' }}
+            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.opacity = '0.9'; el.style.transform = 'scale(1)' }}
+          >
+            <img src="/Shield Animation New.gif" alt="EG Digital" style={{ height: 92, width: 'auto', display: 'block' }} />
+          </a>
+        </div>
+
         {/* ── Divider ── */}
         <div style={{ height: 1, background: 'rgba(255,255,255,0.08)', position: 'relative' }}>
           <div style={{
@@ -314,15 +328,15 @@ export function Footer() {
         </div>
 
         {/* ── Bottom bar ── */}
-        <div style={{
-          padding: 'clamp(18px,2.5vw,28px) 0 clamp(22px,3vw,32px)',
+        <div className="footer-bottom" style={{
+          padding: 'clamp(12px,1.5vw,18px) 0 clamp(16px,2vw,22px)',
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           flexWrap: 'wrap', gap: 14,
         }}>
           <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.28)', margin: 0 }}>
             © 2026 BIVRY Pty Ltd. All rights reserved.
           </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'clamp(10px,2vw,24px)', flexWrap: 'wrap' }}>
+          <div className="footer-legal" style={{ display: 'flex', alignItems: 'center', gap: 'clamp(10px,2vw,24px)', flexWrap: 'wrap' }}>
             {[
               { label: 'Privacy Policy', href: '/privacy-policy' },
               { label: 'Terms of Use',   href: '/terms-of-use'   },
@@ -335,14 +349,14 @@ export function Footer() {
               </a>
             ))}
             <span style={{ color: 'rgba(255,255,255,0.12)', fontSize: 12 }}>|</span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 12, color: 'rgba(255,255,255,0.28)' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'rgba(255,255,255,0.28)' }}>
               Developed by
               <a href="https://egdigital.com.au/" target="_blank" rel="noopener noreferrer" aria-label="EG Digital"
-                style={{ display: 'inline-flex', alignItems: 'center', lineHeight: 0, opacity: 0.85, transition: 'opacity 0.18s ease' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = '1' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
+                style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', fontWeight: 600, textDecoration: 'none', transition: 'color 0.18s ease' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.45)' }}
               >
-                <img src="/images/Shield Animation.gif" alt="EG Digital" style={{ height: 72, width: 'auto', display: 'block', margin: '-26px 0' }} />
+                EG Digital
               </a>
             </span>
           </div>
@@ -352,8 +366,24 @@ export function Footer() {
       <style>{`
         a { text-decoration: none; }
         @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr !important; } }
-        @media (max-width: 640px)  { .footer-grid { grid-template-columns: 1fr 1fr !important; } }
-        @media (max-width: 420px)  { .footer-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 640px)  { .footer-grid { grid-template-columns: 1fr 1fr !important; row-gap: 28px !important; } }
+        @media (max-width: 480px)  { .footer-grid { grid-template-columns: 1fr !important; } }
+
+        /* ── Mobile bottom bar & protected-by ── */
+        @media (max-width: 640px) {
+          .footer-bottom {
+            flex-direction: column !important;
+            justify-content: center !important;
+            text-align: center !important;
+            gap: 12px !important;
+          }
+          .footer-legal {
+            justify-content: center !important;
+          }
+          .footer-protected {
+            justify-content: center !important;
+          }
+        }
 
         .footer-info-box {
           transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;

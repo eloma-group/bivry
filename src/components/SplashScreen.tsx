@@ -43,7 +43,7 @@ export function SplashScreen() {
           >
             {/* Logo */}
             <img
-              src="/images/BIVRY-blue01.png"
+              src="/splash.png"
               alt="BIVRY"
               style={{
                 width: 'clamp(260px, 36vw, 460px)',

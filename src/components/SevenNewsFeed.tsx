@@ -75,7 +75,7 @@ export function SevenNewsFeed() {
               </span>
             </div>
             <h2 style={{ fontSize: 'clamp(52px,6vw,92px)', fontWeight: 900, color: NAVY, letterSpacing: '-0.04em', lineHeight: 0.92, margin: 0, textTransform: 'uppercase' }}>
-              INDUSTRY<br /><span style={{ color: GREEN }}>HEADLINES.</span>
+              <span style={{ color: GREEN }}>HEADLINES.</span>
             </h2>
           </div>
           <p style={{ fontSize: 'clamp(14px,1.15vw,17px)', color: 'rgba(8,33,60,0.5)', lineHeight: 1.8, margin: 0, maxWidth: 380 }}>
