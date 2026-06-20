@@ -314,7 +314,7 @@ export function Footer() {
             onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.opacity = '1'; el.style.transform = 'scale(1.05)' }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.opacity = '0.9'; el.style.transform = 'scale(1)' }}
           >
-            <img src="/Shield Animation New.gif" alt="EG Digital" style={{ height: 92, width: 'auto', display: 'block' }} />
+            <img src="/Shield Animation.gif" alt="EG Digital" style={{ height: 92, width: 'auto', display: 'block' }} />
           </a>
         </div>
 
@@ -352,9 +352,9 @@ export function Footer() {
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 5, fontSize: 12, color: 'rgba(255,255,255,0.28)' }}>
               Developed by
               <a href="https://egdigital.com.au/" target="_blank" rel="noopener noreferrer" aria-label="EG Digital"
-                style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', fontWeight: 600, textDecoration: 'none', transition: 'color 0.18s ease' }}
+                style={{ fontSize: 12, color: GREEN, fontWeight: 600, textDecoration: 'none', transition: 'color 0.18s ease' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(255,255,255,0.45)' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
               >
                 EG Digital
               </a>

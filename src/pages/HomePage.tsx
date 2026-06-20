@@ -1,6 +1,7 @@
+import { useState } from 'react'
 import { SplashScreen } from '../components/SplashScreen'
 import { Header } from '../components/Header/Header'
-import { Hero7 } from '../components/Hero7'
+import { Hero8 } from '../components/Hero8'
 import { Introduction } from '../components/Introduction'
 // import { Services } from '../components/Services'
 import { Services2 } from '../components/Services2'
@@ -12,22 +13,28 @@ import { FooterCTA } from '../components/FooterCTA'
 import { Footer } from '../components/Footer'
 
 export function HomePage() {
+  const [ready, setReady] = useState(false)
+
   return (
     <>
-      <SplashScreen />
-      <Header />
-      <main>
-        <Hero7 />
-        {/* <Services /> */}
-        <Services2 />
-        <Industries />
-        <Credentials3 />
-        <Introduction />
-        <GlobalNetwork2 />
-        <Testimonials />
-      </main>
-      <FooterCTA />
-      <Footer />
+      <SplashScreen onComplete={() => setReady(true)} />
+      {ready && (
+        <>
+          <Header />
+          <main>
+            <Hero8 videos={['/hero-merged.mp4']} />
+            {/* <Services /> */}
+            <Services2 />
+            <Industries />
+            <Credentials3 />
+            <Introduction />
+            <GlobalNetwork2 />
+            <Testimonials />
+          </main>
+          <FooterCTA />
+          <Footer />
+        </>
+      )}
     </>
   )
 }

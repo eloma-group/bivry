@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Truck, Building2, Briefcase } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useIntersection } from '../hooks/useIntersection'
 
 // Matches SplashScreen: 700 delay + 1900 fill + 380 pause + 550 exit fade
@@ -72,14 +72,31 @@ const HEADLINE_LINES = [
   { text: 'Every Time.',  color: '#ffffff' },
 ]
 
-export function Hero7() {
+// Default single video (original look). Pass `videos` to play a sequence.
+const DEFAULT_VIDEO = ['/images/Homepage 1.mp4']
+
+export function Hero7({ videos = DEFAULT_VIDEO }: { videos?: string[] }) {
   const { ref, isVisible } = useIntersection(0.15)
   const [splashDone, setSplashDone] = useState(false)
+
+  // Sequential video playback: 1 → 2 → 3 → 1 → ...
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [clip, setClip] = useState(0)
+  const isSequence = videos.length > 1
 
   useEffect(() => {
     const t = setTimeout(() => setSplashDone(true), SPLASH_MS)
     return () => clearTimeout(t)
   }, [])
+
+  // Load + play whenever the active clip changes (sequence mode)
+  useEffect(() => {
+    if (!isSequence) return
+    const v = videoRef.current
+    if (!v) return
+    v.load()
+    v.play().catch(() => {})
+  }, [clip, isSequence])
 
   return (
     <section
@@ -97,10 +114,14 @@ export function Hero7() {
     >
       {/* Video background */}
       <video
-        autoPlay muted loop playsInline
+        ref={videoRef}
+        key={isSequence ? videos[clip] : 'single'}
+        autoPlay muted playsInline
+        loop={!isSequence}
+        onEnded={isSequence ? () => setClip((c) => (c + 1) % videos.length) : undefined}
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
       >
-        <source src="/images/Homepage 1.mp4" type="video/mp4" />
+        <source src={isSequence ? videos[clip] : videos[0]} type="video/mp4" />
       </video>
 
       {/* Left-side navy overlay */}

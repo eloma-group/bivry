@@ -3,21 +3,27 @@ import { useEffect, useState } from 'react'
 
 const GREEN = '#3CB98C'
 const FILL_DURATION = 1.9
+// Total time the splash stays so its animation plays through fully.
+const SPLASH_DURATION = 700 + FILL_DURATION * 1000 + 380
 
-export function SplashScreen() {
+export function SplashScreen({ onComplete }: { onComplete?: () => void }) {
   const [visible,   setVisible]   = useState(true)
   const [startFill, setStartFill] = useState(false)
 
   useEffect(() => {
     // Begin fill shortly after logo settles
     const t1 = setTimeout(() => setStartFill(true), 700)
-    // Dismiss once fill is done + small pause
-    const t2 = setTimeout(() => setVisible(false), 700 + FILL_DURATION * 1000 + 380)
+    // Dismiss once the fill animation is done + small pause
+    const t2 = setTimeout(() => setVisible(false), SPLASH_DURATION)
     return () => { clearTimeout(t1); clearTimeout(t2) }
   }, [])
 
+  // Notify the parent once the splash has fully faded out, so the page
+  // elements can mount and animate in afterwards.
+  const handleExitComplete = () => onComplete?.()
+
   return (
-    <AnimatePresence>
+    <AnimatePresence onExitComplete={handleExitComplete}>
       {visible && (
         <motion.div
           key="splash"
@@ -51,12 +57,12 @@ export function SplashScreen() {
               }}
             />
 
-            {/* Loading bar row — offset right to sit under the BIVRY text, not the bird */}
+            {/* Loading bar row — centered under the logo */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.45 }}
-              style={{ display: 'flex', alignItems: 'center', gap: '14px', paddingLeft: 'clamp(72px, 10vw, 130px)' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '14px' }}
             >
               {/* Left line grows outward */}
               <motion.div
