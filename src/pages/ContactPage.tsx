@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, CheckCircle, ChevronDown, AlertCircle } from 'lucide-react'
-import emailjs from '@emailjs/browser'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 
@@ -9,6 +8,10 @@ const NAVY  = '#08213C'
 const GREEN = '#3CB98C'
 const CREAM = '#F3F0EA'
 const ease  = [0.16, 1, 0.3, 1] as [number, number, number, number]
+
+/* Web3Forms — submissions are delivered to connect@bivry.com.au
+   (recipient is configured on the Web3Forms account tied to this key). */
+const WEB3FORMS_KEY = '55ada32f-5a18-4f86-a719-e43a06b85974'
 
 const ALL_SERVICES = [
   'Interstate Road Transport', 'Container Movement', 'Regional Deliveries',
@@ -452,23 +455,24 @@ export function ContactPage() {
     setSendError(null)
 
     try {
-      console.log('EmailJS sending with:', {
-        serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key:   WEB3FORMS_KEY,
+          subject:      `New enquiry from ${form.name} - Bivry website`,
+          from_name:    'Bivry Website',
+          name:         form.name,
+          email:        form.email,
+          company:      form.company || 'Not provided',
+          service_type: form.service || 'Not specified',
+          message:      form.message || 'No message',
+        }),
       })
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string,
-        {
-          from_name:    form.name,
-          from_email:   form.email,
-          company:      form.company  || 'Not provided',
-          service_type: form.service  || 'Not specified',
-          message:      form.message  || 'No message',
-        },
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string }
-      )
+      const data = await res.json()
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Submission failed')
+      }
       setSubmitted(true)
     } catch {
       setSendError('Something went wrong - please try again or email us directly at connect@bivry.com.au')
