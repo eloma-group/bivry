@@ -476,8 +476,9 @@ export function ContactPage() {
         throw new Error(data.message || 'Submission failed')
       }
       setSubmitted(true)
-    } catch {
-      setSendError(`Something went wrong - please try again or email us directly at ${CONTACT_EMAIL}`)
+    } catch (err) {
+      const detail = err instanceof Error ? err.message : String(err)
+      setSendError(`Couldn't send (${detail}) - please try again or email us directly at ${CONTACT_EMAIL}`)
     } finally {
       setSubmitting(false)
     }
