@@ -9,9 +9,12 @@ const GREEN = '#3CB98C'
 const CREAM = '#F3F0EA'
 const ease  = [0.16, 1, 0.3, 1] as [number, number, number, number]
 
-/* Where contact enquiries are sent. No external library/service is used —
-   on submit we open the visitor's own email app pre-filled (mailto:). */
-const CONTACT_EMAIL = 'connect@elomagroup.org'
+/* Contact enquiries are emailed here via FormSubmit's free AJAX endpoint.
+   No backend, no account, no library — just a POST. The first submission
+   triggers a one-time confirmation email to this address; click its
+   activation link once and all future submissions are delivered. */
+const CONTACT_EMAIL = 'connect@bivry.com.au'
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`
 
 const ALL_SERVICES = [
   'Interstate Road Transport', 'Container Movement', 'Regional Deliveries',
@@ -448,31 +451,35 @@ export function ContactPage() {
     return () => clearTimeout(t)
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.name.trim() || !form.email.trim()) return
     setSubmitting(true)
     setSendError(null)
 
     try {
-      const subject = `New enquiry from ${form.name} - Bivry website`
-      const body =
-        `Name: ${form.name}\n` +
-        `Email: ${form.email}\n` +
-        `Company: ${form.company || 'Not provided'}\n` +
-        `Service required: ${form.service || 'Not specified'}\n\n` +
-        `Message:\n${form.message || 'No message'}\n`
-
-      const mailto =
-        `mailto:${CONTACT_EMAIL}` +
-        `?subject=${encodeURIComponent(subject)}` +
-        `&body=${encodeURIComponent(body)}`
-
-      // Opens the visitor's email app with everything pre-filled — they press Send.
-      window.location.href = mailto
+      const res = await fetch(FORMSUBMIT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject:           `New enquiry from ${form.name} - Bivry website`,
+          _template:          'table',
+          _captcha:           'false',
+          Name:               form.name,
+          Email:              form.email,
+          Company:            form.company || 'Not provided',
+          'Service required': form.service || 'Not specified',
+          Message:            form.message || 'No message',
+        }),
+      })
+      const data = await res.json()
+      // FormSubmit AJAX returns success as the string "true".
+      if (!res.ok || String(data.success) !== 'true') {
+        throw new Error(data.message || 'Submission failed')
+      }
       setSubmitted(true)
     } catch {
-      setSendError(`Couldn't open your email app - please email us directly at ${CONTACT_EMAIL}`)
+      setSendError(`Something went wrong - please try again or email us directly at ${CONTACT_EMAIL}`)
     } finally {
       setSubmitting(false)
     }
@@ -701,10 +708,10 @@ export function ContactPage() {
               >
                 <CheckCircle size={52} color={GREEN} strokeWidth={1.5} />
                 <h3 style={{ fontSize: 28, fontWeight: 900, color: NAVY, margin: 0, letterSpacing: '-0.03em' }}>
-                  Almost there!
+                  Message Sent!
                 </h3>
                 <p style={{ fontSize: 15, color: 'rgba(8,33,60,0.5)', lineHeight: 1.7, margin: 0, maxWidth: 380 }}>
-                  Your email app has opened with your details ready. Just press <strong style={{ color: NAVY }}>Send</strong> and our team will get back to you within 4 business hours.
+                  Our team will get back to you within 4 business hours. We look forward to moving freight with you.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setSendError(null); setForm({ name:'',email:'',company:'',service:'',message:'' }) }}
