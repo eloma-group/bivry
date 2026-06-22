@@ -132,12 +132,12 @@ export function Footer() {
           {/* ── Brand column ── */}
           <div>
             <a href="#" style={{ display: 'inline-block', lineHeight: 0, marginBottom: 12, marginLeft: '-28px' }}>
-              <img src="/images/BIVRY-white01.png" alt="BIVRY" style={{ height: 'clamp(64px, 6vw, 80px)', width: 'auto' }} />
+              <img src="/images/BIVRY-white01.png" alt="BIVRY road freight and warehousing Australia logo" style={{ height: 'clamp(64px, 6vw, 80px)', width: 'auto' }} />
             </a>
 
             <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.42)', lineHeight: 1.7, maxWidth: 270, marginBottom: 16 }}>
-              Premium road freight, warehousing and distribution across Australia.
-              Reliable. Trackable. Trusted.
+              BIVRY — Australia's trusted logistics company for road freight,
+              warehousing and distribution.
             </p>
 
             {/* Contact details */}
@@ -177,6 +177,23 @@ export function Footer() {
                   71 Gipps Street, Collingwood,<br />Melbourne, VIC 3066, Australia
                 </span>
               </a>
+
+              {/* Service areas */}
+              <div className="footer-info-box" style={{
+                display: 'flex', alignItems: 'flex-start', gap: 10,
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.12)',
+                borderRadius: 8, padding: '10px 12px',
+              }}>
+                <MapPin size={14} strokeWidth={1.5} style={{ flexShrink: 0, color: GREEN, marginTop: 3 }} />
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500, lineHeight: 1.65 }}>
+                  Headquartered in{' '}
+                  <a href="#" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Melbourne</a>
+                  {' '}(Collingwood, VIC) — serving{' '}
+                  <a href="#" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Sydney</a>
+                  , Brisbane, Perth, Adelaide &amp; all Australian states.
+                </span>
+              </div>
 
               {/* Highlighted ABN */}
               <div className="footer-info-box" style={{
@@ -390,6 +407,8 @@ export function Footer() {
           cursor: default;
         }
         .footer-location-link { cursor: pointer; }
+        .footer-area-link { cursor: pointer; transition: text-decoration-color 0.2s ease; text-underline-offset: 2px; }
+        .footer-area-link:hover { text-decoration: underline; }
         .footer-info-box:hover {
           transform: translateY(-4px);
           border-color: rgba(60,185,140,0.65) !important;

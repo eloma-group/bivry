@@ -24,7 +24,7 @@ const CITIES = [
 
 const FEATURES = [
   { Icon: Headphones,    line1: '24×7',             line2: 'Customer Support', desc: 'Round-the-clock support from our dedicated freight specialists across every time zone.' },
-  { Icon: MapPin,        line1: 'Real-time',         line2: 'Tracking',         desc: 'GPS-powered live visibility on every shipment, every mile of its journey.' },
+  { Icon: MapPin,        line1: 'GPS Freight Tracking', line2: 'Australia',       desc: 'GPS-powered live visibility on every shipment — 24/7 GPS freight tracking across Australia.' },
   { Icon: Globe2,        line1: 'Global Freight',    line2: 'Network',          desc: '10 international corridors from Sydney spanning 5 continents.' },
   { Icon: UserCheck,     line1: 'Dedicated Account', line2: 'Manager',          desc: 'A personal freight specialist who knows your cargo and your business.' },
   { Icon: ShieldCheck,   line1: 'Secure Cargo',      line2: 'Handling',         desc: 'Full insurance coverage and tamper-proof transit protocols on every route.' },
@@ -64,10 +64,10 @@ function FeatureCard({ Icon, line1, line2, desc, visible, delay }: {
         <Icon size={21} strokeWidth={1.6} />
       </div>
 
-      <div style={{ marginBottom: '10px', lineHeight: 1.25 }}>
-        <div style={{ fontSize: '13.5px', fontWeight: 800, color: TEXT }}>{line1}</div>
-        <div style={{ fontSize: '13.5px', fontWeight: 800, color: TEXT }}>{line2}</div>
-      </div>
+      <h3 style={{ margin: '0 0 10px', lineHeight: 1.25 }}>
+        <span style={{ display: 'block', fontSize: '13.5px', fontWeight: 800, color: TEXT }}>{line1}</span>
+        <span style={{ display: 'block', fontSize: '13.5px', fontWeight: 800, color: TEXT }}>{line2}</span>
+      </h3>
 
       <div className="gn2-feat-divider" style={{
         height: '2px', width: '32px', borderRadius: '2px',
@@ -177,19 +177,25 @@ export function GlobalNetwork2() {
         </div>
       </div>
 
-      {/* ── RIGHT: feature grid ── */}
-      <div className="gn2-feat-grid">
-        {FEATURES.map((f, i) => (
-          <FeatureCard
-            key={i}
-            Icon={f.Icon}
-            line1={f.line1}
-            line2={f.line2}
-            desc={f.desc}
-            visible={on}
-            delay={0.06 * i}
-          />
-        ))}
+      {/* ── RIGHT: why choose us ── */}
+      <div className="gn2-feat-wrap">
+        <h2 className="gn2-feat-title">
+          <span style={{ display: 'block' }}>Why Choose</span>
+          <span style={{ display: 'block', color: GREEN }}>BIVRY for Road Freight in Australia</span>
+        </h2>
+        <div className="gn2-feat-grid">
+          {FEATURES.map((f, i) => (
+            <FeatureCard
+              key={i}
+              Icon={f.Icon}
+              line1={f.line1}
+              line2={f.line2}
+              desc={f.desc}
+              visible={on}
+              delay={0.06 * i}
+            />
+          ))}
+        </div>
       </div>
 
       <style>{`
@@ -225,6 +231,27 @@ export function GlobalNetwork2() {
           flex-direction:       column;
           padding:              clamp(22px, 2.4vw, 32px) clamp(16px, 1.8vw, 24px);
           box-sizing:           border-box;
+        }
+
+        /* ── Right wrapper: title + grid ── */
+        .gn2-feat-wrap {
+          flex:           1;
+          min-width:      0;
+          display:        flex;
+          flex-direction: column;
+          overflow:       hidden;
+        }
+
+        /* ── Section title ── */
+        .gn2-feat-title {
+          margin:         0;
+          padding:        clamp(40px, 4.5vw, 64px) clamp(14px, 1.4vw, 20px) 0;
+          font-size:      clamp(1.35rem, 2vw, 2.1rem);
+          font-weight:    800;
+          letter-spacing: -0.03em;
+          line-height:    1.2;
+          color:          ${TEXT};
+          text-align:     center;
         }
 
         /* ── Feature grid ── */

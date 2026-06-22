@@ -105,14 +105,28 @@ function ServiceRow({
           transition={{ duration: 0.38, ease }}
           style={{
             flex: 1,
-            fontSize: 'clamp(17px, 2.2vw, 32px)',
-            fontWeight: 700,
             color: active ? NAVY : 'rgba(8,33,60,0.6)',
-            letterSpacing: '-0.03em', lineHeight: 1.1,
             transition: 'color 0.3s ease',
           }}
         >
-          {svc.name}
+          <div style={{
+            fontSize: 'clamp(17px, 2.2vw, 32px)',
+            fontWeight: 700,
+            letterSpacing: '-0.03em', lineHeight: 1.1,
+          }}>
+            {svc.name}
+          </div>
+          {svc.shortDescription && (
+            <h3 style={{
+              margin: '8px 0 0',
+              fontSize: 'clamp(14px, 1.3vw, 17px)',
+              fontWeight: 400,
+              color: 'rgba(8,33,60,0.52)',
+              letterSpacing: 'normal', lineHeight: 1.6,
+            }}>
+              {svc.shortDescription}
+            </h3>
+          )}
         </motion.div>
 
         {/* Arrow */}
@@ -314,9 +328,9 @@ export function Services2() {
               <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: GREEN, display: 'block' }} />
               <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: GREEN, opacity: 0.45, display: 'block' }} />
             </span>
-            <span style={{ fontSize: '10.5px', fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: GREEN }}>
-              Full Service Suite
-            </span>
+            <h2 style={{ margin: 0, fontSize: '10.5px', fontWeight: 700, letterSpacing: '2.5px', textTransform: 'uppercase', color: GREEN }}>
+              Interstate Road Transport, Same Day Delivery, Warehousing &amp; More
+            </h2>
           </motion.div>
 
           {/* Display headline */}

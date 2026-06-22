@@ -158,9 +158,9 @@ export function Introduction() {
             }}
           >
             Reliable transport. Real-time tracking. Tailored logistics for your business.
-            BIVRY combines smart operations with real-world reliability to move what
-            matters - from dockyard to doorstep, across every state and territory in
-            Australia.
+            BIVRY is Australia's leading logistics company — combining smart operations
+            with real-world reliability to move what matters, from dockyard to doorstep,
+            across every state and territory.
           </motion.p>
 
           <div style={{ display: 'flex', gap: '0', alignItems: 'flex-start' }}>

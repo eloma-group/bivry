@@ -100,7 +100,7 @@ export function Header() {
             {/* White version — visible over dark/transparent header */}
             <img
               src="/images/bivry-logo-white.png"
-              alt=""
+              alt="BIVRY road freight and warehousing Australia logo"
               aria-hidden
               draggable={false}
               style={{
@@ -115,7 +115,7 @@ export function Header() {
             {/* Blue version — visible over solid white header */}
             <img
               src="/images/BIVRY-blue01.png"
-              alt="BIVRY"
+              alt="BIVRY road freight and warehousing Australia logo"
               style={{
                 height: '50px', width: 'auto',
                 opacity: transparent ? 0 : 1,
