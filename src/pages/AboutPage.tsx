@@ -98,7 +98,7 @@ export function AboutPage() {
               marginTop: 'clamp(60px,10vh,120px)',
               paddingLeft: 'clamp(20px,3vw,48px)',
             }}>
-              Australia's trusted road freight and logistics network — built for reliability, speed and GPS-tracked delivery, connecting businesses coast to goes across Australia.
+              Australia's trusted road freight and logistics network — built for reliability, speed and GPS-tracked delivery.
             </h1>
 
             <div style={{ paddingLeft: 'clamp(20px,3vw,48px)' }}>
