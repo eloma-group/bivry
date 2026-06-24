@@ -1,11 +1,13 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/assets/*", "/images/*", "*.{css,js,svg,png,jpg,jpeg,gif,webp,mp4,ico}"]
+    "exclude": ["/assets/*", "/images/*", "*.{css,js,svg,png,jpg,jpeg,gif,webp,mp4,ico,txt,xml,webmanifest}"]
   },
   "mimeTypes": {
     ".mp4": "video/mp4",
     ".webp": "image/webp",
-    ".svg": "image/svg+xml"
+    ".svg": "image/svg+xml",
+    ".ico": "image/x-icon",
+    ".xml": "application/xml"
   }
 }

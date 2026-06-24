@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bivry.com.au/sitemap.xml
