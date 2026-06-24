@@ -1,4 +1,5 @@
 import { LegalPage, type LegalSection } from '../components/LegalPage'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const SECTIONS: LegalSection[] = [
   {
@@ -105,6 +106,7 @@ const SECTIONS: LegalSection[] = [
 ]
 
 export function PrivacyPolicyPage() {
+  usePageTitle("Privacy Policy — BIVRY")
   return (
     <LegalPage
       badge="Legal"

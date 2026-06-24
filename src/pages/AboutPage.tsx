@@ -5,6 +5,7 @@ import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { NAVY, GREEN, CREAM } from '../components/InnerHero'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number]
 
@@ -28,6 +29,8 @@ export function AboutPage() {
       else el.scrollIntoView({ behavior: 'smooth' })
     }, 200)
   }
+
+  usePageTitle("About BIVRY — Australia's Road Freight & Logistics Company")
 
   /* load cursive font for signature section */
   useEffect(() => {
@@ -93,12 +96,12 @@ export function AboutPage() {
               marginTop: 'clamp(60px,10vh,120px)',
               paddingLeft: 'clamp(20px,3vw,48px)',
             }}>
-              A freight network built for reliability, speed and trust - connecting Australian businesses coast to coast.
+              Australia's trusted road freight and logistics network — built for reliability, speed and GPS-tracked delivery, connecting businesses coast to goes across Australia.
             </h1>
 
             <div style={{ paddingLeft: 'clamp(20px,3vw,48px)' }}>
               <p style={{ fontSize: 'clamp(14px, 1.05vw, 20px)', color: 'rgba(8,33,60,0.48)', lineHeight: 1.8, margin: 0, maxWidth: 'clamp(360px, 30vw, 520px)' }}>
-                Born in Melbourne with one truck. Today a national depot network serving businesses of every size across every state and territory.
+                Born in Melbourne with one truck. Today BIVRY is a national road freight and logistics company — serving businesses of every size across Sydney, Melbourne, Brisbane, Perth, Adelaide and every Australian state and territory.
               </p>
             </div>
           </div>
@@ -141,12 +144,13 @@ export function AboutPage() {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, ease, delay: 0.06 }}
               >
-                <div style={{
+                <h1 style={{
+                  margin: 0,
                   fontSize: 'clamp(36px,5.5vw,78px)', fontWeight: 900, color: '#fff',
                   letterSpacing: '-0.045em', lineHeight: 0.9, textTransform: 'uppercase',
                 }}>
-                  WE MOVE<br />WHAT<br /><span style={{ color: GREEN }}>MATTERS.</span>
-                </div>
+                  Australia's Road <span style={{ color: GREEN }}>Freight &amp; Logistics</span> Company
+                </h1>
               </motion.div>
             </div>
 
@@ -156,7 +160,7 @@ export function AboutPage() {
               style={{ paddingTop: 'clamp(0px,3vw,48px)' }}
             >
               <p style={{ fontSize: 'clamp(14px,1.15vw,18px)', color: 'rgba(255,255,255,0.52)', lineHeight: 1.88, margin: '0 0 36px' }}>
-                We started with one truck and one promise: your freight arrives on time. That promise hasn't changed - but our reach has. Today Bivry connects businesses from Darwin to Hobart, Broome to Brisbane, with the same care we gave our very first customer.
+                We started with one truck and one promise: your freight arrives on time. Today BIVRY is one of Australia's most trusted road freight and logistics companies — connecting businesses from Sydney to Perth, Broome to Brisbane, with on-time delivery and 24/7 GPS tracking across every Australian state.
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                 <div style={{ height: 1, flex: 1, background: `${GREEN}44` }} />
@@ -170,7 +174,7 @@ export function AboutPage() {
           {/* Bottom row: capability strips */}
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             {[
-              { label: 'Road Freight',         desc: 'Interstate & metro lanes, B-double to van' },
+              { label: 'Road Freight',         desc: 'Interstate road transport Australia — B-double to van, all states' },
               { label: 'Same-Day Delivery',     desc: 'When hours count - local and regional' },
               { label: 'Warehousing',           desc: 'Pick, pack and dispatch from our depots' },
               { label: 'Contract Logistics',    desc: 'Dedicated freight solutions at scale' },
@@ -245,15 +249,15 @@ export function AboutPage() {
             style={{ paddingTop: 'clamp(8px,2vw,32px)' }}
           >
             <p style={{ fontSize: 'clamp(16px,1.45vw,21px)', color: 'rgba(8,33,60,0.58)', lineHeight: 1.88, margin: '0 0 40px' }}>
-              That's how a freight company that started with one truck built a national network: through reliability, consistency, and a shared commitment to delivery. Route by route, client after client - let the work speak for itself.
+              That's how an Australian road freight and logistics company that started with one truck built a national network: through reliability, consistency, and a shared commitment to on-time delivery across Australia. Route by route, client after client — let the work speak for itself.
             </p>
 
             {/* Trust signals */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0, borderTop: '1px solid rgba(8,33,60,0.08)' }}>
               {[
-                { title: 'Word of mouth', sub: 'Most new clients arrive through referrals from existing partners.' },
+                { title: 'Word of mouth', sub: 'Most new clients arrive through referrals — Australian businesses trust BIVRY for road freight and logistics.' },
                 { title: 'Long-term accounts', sub: 'The majority of our clients have been with us for years.' },
-                { title: 'No lock-in contracts', sub: 'We earn your business every single delivery.' },
+                { title: 'No lock-in contracts', sub: 'We earn your business every single delivery — road freight and logistics services across Australia, no lock-in.' },
               ].map((item, i) => (
                 <motion.div key={item.title}
                   initial={{ opacity: 0, x: 16 }} whileInView={{ opacity: 1, x: 0 }}
@@ -298,6 +302,18 @@ export function AboutPage() {
           </div>
         </motion.div>
 
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.7, ease, delay: 0.1 }}
+          style={{
+            margin: 'clamp(8px,1.5vw,20px) 0 clamp(32px,5vw,64px)',
+            fontSize: 'clamp(28px,4vw,56px)', fontWeight: 900, color: NAVY,
+            letterSpacing: '-0.03em', lineHeight: 1.05,
+          }}
+        >
+          Our Road <span style={{ color: GREEN }}>Freight &amp; Logistics</span><br />Services Across Australia
+        </motion.h1>
+
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
@@ -305,7 +321,7 @@ export function AboutPage() {
             style={{ maxWidth: 'clamp(260px,30vw,420px)', paddingTop: 'clamp(16px,2vw,28px)', position: 'relative', zIndex: 2 }}
           >
             <p style={{ fontSize: 'clamp(15px,1.3vw,19px)', color: NAVY, lineHeight: 1.8, marginBottom: 32 }}>
-              Reliability is nothing without speed. We deliver both. Road freight, same-day delivery, warehousing and contract logistics - all under one roof, across every Australian state.
+              Reliability is nothing without speed. We deliver both. Road freight, same-day delivery, warehousing and contract logistics — all under one roof, across every Australian state. From Sydney to Perth, Melbourne to Adelaide — BIVRY's freight network runs 24/7.
             </p>
             <a href="/#services" onClick={goToServices}
               style={{

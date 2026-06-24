@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const PARTNERS = [
   { name: 'Isuzu',           logo: '/images/isuzu.jpg',           cat: 'Fleet & Vehicles',   desc: 'Proudly delivering vehicle parts for Isuzu, helping dealerships and service networks stay supplied and operational.' },
@@ -226,6 +227,7 @@ function DepotCard({ depot, delay }: { depot: Depot; delay: number }) {
 }
 
 export function NetworksPage() {
+  usePageTitle("Our Network — BIVRY Road Freight & Logistics Australia")
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>
       <Header />

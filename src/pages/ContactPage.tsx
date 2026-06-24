@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, CheckCircle, ChevronDown, AlertCircle } from 'lucide-react'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const NAVY  = '#08213C'
 const GREEN = '#3CB98C'
@@ -425,6 +426,7 @@ function CityTag({ name, address }: { name: string; address: string }) {
 
 /* ─── Main Export ────────────────────────────────────────── */
 export function ContactPage() {
+  usePageTitle("Contact BIVRY — Road Freight & Logistics Australia")
   const [form, setForm] = useState({ name:'', email:'', company:'', service:'', message:'' })
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted]   = useState(false)

@@ -4,6 +4,7 @@ import type { LucideIcon } from 'lucide-react'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const FEATURED = {
   category: 'Technology',
@@ -114,6 +115,7 @@ const TOPIC_CARDS: { category: string; color: string; Icon: LucideIcon; count: n
 ]
 
 export function BlogsPage() {
+  usePageTitle("BIVRY Blog — Road Freight & Logistics Insights Australia")
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>
       <Header />

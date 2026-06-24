@@ -11,8 +11,10 @@ import { Testimonials } from '../components/Testimonials'
 import { Credentials3 } from '../components/Credentials3'
 import { FooterCTA } from '../components/FooterCTA'
 import { Footer } from '../components/Footer'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 export function HomePage() {
+  usePageTitle("BIVRY — Australia's Road Freight & Logistics Company")
   const [ready, setReady] = useState(false)
 
   return (

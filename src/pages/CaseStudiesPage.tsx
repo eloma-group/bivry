@@ -4,6 +4,7 @@ import { ArrowRight, Navigation2, BrainCircuit, Camera, Eye } from 'lucide-react
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 /* ── Case studies: 4 real + 1 supporting + 2 new real ── */
 const STUDIES = [
@@ -398,6 +399,7 @@ function FleetRow({ f, idx }: { f: typeof FLEET_FEATURES[0]; idx: number }) {
 
 /* ── Page ── */
 export function CaseStudiesPage() {
+  usePageTitle("Case Studies — BIVRY Road Freight & Logistics Australia")
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>
       <Header />

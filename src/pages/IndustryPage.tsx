@@ -6,6 +6,7 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { INDUSTRIES } from '../data/industryData'
+import { usePageTitle } from '../hooks/usePageTitle'
 import type { Challenge, Commitment } from '../data/industryData'
 
 /* ── Challenge Card ───────────────────────────────────────── */
@@ -206,6 +207,12 @@ function CommitmentColumn({ c, i, total }: { c: Commitment; i: number; total: nu
 export function IndustryPage() {
   const { slug } = useParams<{ slug: string }>()
   const industry = INDUSTRIES.find(ind => ind.slug === slug)
+
+  usePageTitle(
+    industry
+      ? `${industry.name} Freight & Logistics — BIVRY`
+      : "BIVRY — Australia's Road Freight & Logistics Company"
+  )
 
   if (!industry) return <Navigate to="/" replace />
 
