@@ -7,6 +7,7 @@ import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { INDUSTRIES } from '../data/industryData'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import type { Challenge, Commitment } from '../data/industryData'
 
 /* ── Challenge Card ───────────────────────────────────────── */
@@ -210,8 +211,13 @@ export function IndustryPage() {
 
   usePageTitle(
     industry
-      ? `${industry.name} Freight & Logistics — BIVRY`
+      ? industry.metaTitle ?? `${industry.name} Freight & Logistics — BIVRY`
       : "BIVRY — Australia's Road Freight & Logistics Company"
+  )
+
+  useMetaDescription(
+    industry?.metaDescription ??
+      'Premium road freight, warehousing and distribution across Australia. 96.2% on-time delivery, 24/7 GPS tracking. Reliable. Trackable. Trusted.'
   )
 
   if (!industry) return <Navigate to="/" replace />
@@ -233,6 +239,8 @@ export function IndustryPage() {
           badge={industry.badge}
           line1={industry.heroLine1}
           line2={industry.heroLine2}
+          titleSize={industry.heroTitleSize}
+          titleLineHeight={industry.heroTitleLineHeight}
           greenLine={industry.greenLine}
           description={industry.heroDescription}
           meta={industry.heroMeta}
@@ -326,19 +334,29 @@ export function IndustryPage() {
                   textTransform: 'uppercase', color: 'rgba(8,33,60,0.38)',
                 }}>How We Help</span>
               </div>
-              <h2 style={{
-                fontSize: 'clamp(32px,4.5vw,72px)', fontWeight: 900,
-                color: NAVY, letterSpacing: '-0.046em', lineHeight: 0.95,
-                margin: '0 0 18px', textTransform: 'uppercase',
-              }}>
-                THE CHALLENGES <span style={{ color: GREEN }}>WE SOLVE.</span>
-              </h2>
+              {industry.challengesTitleLine1 ? (
+                <h1 style={{
+                  fontSize: 'clamp(32px,4.5vw,72px)', fontWeight: 900,
+                  color: NAVY, letterSpacing: '-0.046em', lineHeight: 0.95,
+                  margin: '0 0 18px', textTransform: 'uppercase',
+                }}>
+                  {industry.challengesTitleLine1}<br /><span style={{ color: GREEN }}>{industry.challengesTitleLine2}</span>
+                </h1>
+              ) : (
+                <h2 style={{
+                  fontSize: 'clamp(32px,4.5vw,72px)', fontWeight: 900,
+                  color: NAVY, letterSpacing: '-0.046em', lineHeight: 0.95,
+                  margin: '0 0 18px', textTransform: 'uppercase',
+                }}>
+                  THE CHALLENGES <span style={{ color: GREEN }}>WE SOLVE.</span>
+                </h2>
+              )}
               <p style={{
                 fontSize: 'clamp(14px,1.1vw,16px)',
                 color: 'rgba(8,33,60,0.48)', lineHeight: 1.75,
                 maxWidth: 520, margin: 0,
               }}>
-                Every {industry.name} operation faces unique freight challenges. Here's how Bivry addresses them.
+                {industry.challengesSubtext ?? `Every ${industry.name} operation faces unique freight challenges. Here's how Bivry addresses them.`}
               </p>
             </motion.div>
 

@@ -13,9 +13,13 @@ interface HeroProps {
   greenLine?: 1 | 2
   description?: string
   meta?: Array<{ label: string; value: string }>
+  /** Override the hero title font-size. Defaults to the standard large clamp. */
+  titleSize?: string
+  /** Override the hero title line-height (space between the two lines). Defaults to 0.9. */
+  titleLineHeight?: number
 }
 
-export function InnerHero({ badge, line1, line2, greenLine = 2, description, meta }: HeroProps) {
+export function InnerHero({ badge, line1, line2, greenLine = 2, description, meta, titleSize, titleLineHeight }: HeroProps) {
   return (
     <section style={{
       minHeight: '78vh', background: CREAM,
@@ -52,8 +56,8 @@ export function InnerHero({ badge, line1, line2, greenLine = 2, description, met
           initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease, delay: 0.1 }}
           style={{
-            fontSize: 'clamp(52px,10.5vw,136px)', fontWeight: 900,
-            letterSpacing: '-0.046em', lineHeight: 0.9,
+            fontSize: titleSize ?? 'clamp(52px,10.5vw,136px)', fontWeight: 900,
+            letterSpacing: '-0.046em', lineHeight: titleLineHeight ?? 0.9,
             margin: '0 0 28px', textTransform: 'uppercase' as const,
           }}
         >
