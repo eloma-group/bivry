@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { ArrowRight, Cpu, Package, GitMerge, Building2, Truck, Leaf, Anchor, Share2 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { Header } from '../components/Header/Header'
@@ -15,7 +16,18 @@ const FEATURED = {
   tags: ['Linehaul', 'Freight', 'Logistics'],
 }
 
-const POSTS = [
+interface Post {
+  category: string
+  date: string
+  readTime: string
+  title: string
+  excerpt: string
+  tags: string[]
+  /** Optional internal route — when set, the card links to a full article page. */
+  slug?: string
+}
+
+const POSTS: Post[] = [
   {
     category: 'Logistics',
     date: 'June 2025',
@@ -23,6 +35,7 @@ const POSTS = [
     title: 'Same Day Delivery vs Standard Freight: Which One Does Your Business Need?',
     excerpt: 'Same day delivery offers speed when it counts, while standard freight keeps costs down for less time-sensitive shipments. We break down the differences in cost, speed, and reliability so you can decide which option best fits your business needs.',
     tags: ['Same Day Delivery', 'Standard Freight', 'Logistics'],
+    slug: '/blog/same-day-delivery-vs-standard-freight',
   },
   {
     category: 'Supply Chain',
@@ -152,7 +165,7 @@ export function BlogsPage() {
 
                 {/* CTA */}
                 <div>
-                  <a href="#blog-posts" style={{
+                  <Link to="/blog/linehaul-transport-australia" style={{
                     display: 'inline-flex', alignItems: 'center', gap: 10,
                     background: NAVY, color: '#fff', borderRadius: 100,
                     padding: '14px 30px', fontSize: 14, fontWeight: 700,
@@ -163,7 +176,7 @@ export function BlogsPage() {
                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = NAVY }}
                   >
                     <ArrowRight size={14} strokeWidth={2.5} /> Read Article
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -252,12 +265,21 @@ export function BlogsPage() {
                     </div>
                     <h3 style={{ fontSize: 'clamp(24px,2vw,28px)', fontWeight: 900, color: NAVY, margin: '0 0 12px', letterSpacing: '-0.03em', lineHeight: 1.2, textTransform: 'uppercase', flex: 1 }}>{post.title}</h3>
                     <p style={{ fontSize: 'clamp(13px,1vw,14px)', color: 'rgba(8,33,60,0.5)', lineHeight: 1.75, margin: '0 0 24px' }}>{post.excerpt.slice(0, 130)}…</p>
-                    <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 13, fontWeight: 700, color: NAVY, textDecoration: 'none', transition: 'color 0.18s ease', minHeight: 44 }}
-                      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
-                      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = NAVY }}
-                    >
-                      <ArrowRight size={13} strokeWidth={2.5} /> Read More
-                    </a>
+                    {post.slug ? (
+                      <Link to={post.slug} style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 13, fontWeight: 700, color: NAVY, textDecoration: 'none', transition: 'color 0.18s ease', minHeight: 44 }}
+                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
+                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = NAVY }}
+                      >
+                        <ArrowRight size={13} strokeWidth={2.5} /> Read More
+                      </Link>
+                    ) : (
+                      <a href="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 13, fontWeight: 700, color: NAVY, textDecoration: 'none', transition: 'color 0.18s ease', minHeight: 44 }}
+                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
+                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = NAVY }}
+                      >
+                        <ArrowRight size={13} strokeWidth={2.5} /> Read More
+                      </a>
+                    )}
                   </div>
                 </motion.article>
               ))}

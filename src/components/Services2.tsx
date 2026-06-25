@@ -267,14 +267,17 @@ export function Services2() {
     })
   }, [])
 
-  // On mount: pick up cross-page serviceId from sessionStorage (set by Footer/Header before navigating)
+  // On mount: pick up cross-page serviceId from sessionStorage (set by Footer/Header/links before navigating).
+  // Note: the key is only cleared once the scroll actually fires — clearing it earlier would lose the
+  // pending target under StrictMode's mount→cleanup→mount double-invoke (the re-run would find nothing).
   useEffect(() => {
     const pending = sessionStorage.getItem('pendingService')
-    if (pending) {
+    if (!pending) return
+    const t = setTimeout(() => {
       sessionStorage.removeItem('pendingService')
-      const t = setTimeout(() => scrollToRow(pending), 600)
-      return () => clearTimeout(t)
-    }
+      scrollToRow(pending)
+    }, 600)
+    return () => clearTimeout(t)
   }, [scrollToRow])
 
   // Same-page: custom event (Header dropdowns when already on homepage)
