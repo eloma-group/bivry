@@ -12,6 +12,7 @@ import { SameDayFreightArticlePage } from './pages/SameDayFreightArticlePage'
 import { NewsPage } from './pages/NewsPage'
 import { CareersPage } from './pages/CareersPage'
 import { IndustryPage } from './pages/IndustryPage'
+import { CityFreightPage } from './pages/CityFreightPage'
 import { TermsOfUsePage } from './pages/TermsOfUsePage'
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage'
 
@@ -32,6 +33,11 @@ function App() {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/industries/:slug" element={<IndustryPage />} />
+        <Route path="/freight-company-melbourne" element={<CityFreightPage slug="freight-company-melbourne" />} />
+        <Route path="/freight-company-sydney" element={<CityFreightPage slug="freight-company-sydney" />} />
+        <Route path="/freight-company-brisbane" element={<CityFreightPage slug="freight-company-brisbane" />} />
+        <Route path="/freight-company-perth" element={<CityFreightPage slug="freight-company-perth" />} />
+        <Route path="/freight-company-adelaide" element={<CityFreightPage slug="freight-company-adelaide" />} />
         <Route path="/terms-of-use" element={<TermsOfUsePage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
