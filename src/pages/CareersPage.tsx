@@ -9,6 +9,7 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useCanonical } from '../hooks/useCanonical'
 
 /* ── Job listings ─────────────────────────────────────── */
 type Job = {
@@ -234,6 +235,7 @@ function JobCard({ job, i }: { job: Job; i: number }) {
 /* ── Page ─────────────────────────────────────────────── */
 export function CareersPage() {
   usePageTitle("Careers at BIVRY — Road Freight & Logistics Jobs Australia")
+  useCanonical('/careers')
   const [activeDept, setActiveDept] = useState('All')
 
   const filtered = activeDept === 'All' ? JOBS : JOBS.filter(j => j.dept === activeDept)

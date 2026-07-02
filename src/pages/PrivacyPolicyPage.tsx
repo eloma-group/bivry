@@ -1,5 +1,6 @@
 import { LegalPage, type LegalSection } from '../components/LegalPage'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useCanonical } from '../hooks/useCanonical'
 
 const SECTIONS: LegalSection[] = [
   {
@@ -107,6 +108,7 @@ const SECTIONS: LegalSection[] = [
 
 export function PrivacyPolicyPage() {
   usePageTitle("Privacy Policy — BIVRY")
+  useCanonical('/privacy-policy')
   return (
     <LegalPage
       badge="Legal"

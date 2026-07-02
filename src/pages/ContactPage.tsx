@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, ChevronDown, AlertCircle } from 'lucide-react'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useCanonical } from '../hooks/useCanonical'
 
 const NAVY  = '#08213C'
 const GREEN = '#3CB98C'
@@ -15,6 +16,14 @@ const ease  = [0.16, 1, 0.3, 1] as [number, number, number, number]
    this access key. No backend or npm library — just a POST. */
 const CONTACT_EMAIL = 'connect@bivry.com.au'
 const WEB3FORMS_KEY = '55ada32f-5a18-4f86-a719-e43a06b85974'
+
+/* Phone validation: accept an optional leading "+" and 8–15 digits once
+   spaces, dashes, dots and parentheses are stripped. Covers Australian
+   mobile/landline/1800/1300 formats as well as international numbers. */
+function isValidPhone(raw: string): boolean {
+  const cleaned = raw.replace(/[\s()\-.]/g, '')
+  return /^\+?\d{8,15}$/.test(cleaned)
+}
 
 const ALL_SERVICES = [
   'Interstate Road Transport', 'Container Movement', 'Regional Deliveries',
@@ -177,7 +186,7 @@ function ContactInfoPanel() {
 }
 
 /* ─── Custom Service Dropdown (field 04) ────────────────── */
-function ServiceField({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+function ServiceField({ num, value, onChange }: { num: number; value: string; onChange: (v: string) => void }) {
   const [open, setOpen] = useState(false)
   const wrapRef  = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -217,7 +226,7 @@ function ServiceField({ value, onChange }: { value: string; onChange: (v: string
           fontSize: 11, fontWeight: 800, paddingTop: 1,
           color: open ? GREEN : 'rgba(8,33,60,0.28)',
           transition: 'color 0.2s ease',
-        }}>04</span>
+        }}>{String(num).padStart(2, '0')}</span>
 
         <div
           onClick={() => setOpen(o => !o)}
@@ -302,12 +311,16 @@ function ServiceField({ value, onChange }: { value: string; onChange: (v: string
 function NumField({
   num, placeholder, value, onChange, type = 'text',
   tag = 'input' as 'input' | 'textarea',
+  error = null, onBlur,
 }: {
   num: number; placeholder: string; value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
   type?: string; tag?: 'input' | 'textarea'
+  error?: string | null; onBlur?: () => void
 }) {
   const [focused, setFocused] = useState(false)
+  const handleBlur = () => { setFocused(false); onBlur?.() }
+  const borderColor = error ? '#dc2626' : focused ? GREEN : 'rgba(8,33,60,0.1)'
   const shared: React.CSSProperties = {
     border: 'none', outline: 'none', background: 'transparent',
     fontSize: 'clamp(13px,1.15vw,17px)', fontWeight: 600, color: NAVY,
@@ -315,35 +328,43 @@ function NumField({
     fontFamily: 'inherit', width: '100%',
   }
   return (
-    <div style={{
-      display: 'grid', gridTemplateColumns: '42px 1fr',
-      gap: 16, alignItems: 'flex-start',
-      borderBottom: `1.5px solid ${focused ? GREEN : 'rgba(8,33,60,0.1)'}`,
-      padding: '18px 0', transition: 'border-color 0.2s ease',
-    }}>
-      <span style={{
-        fontSize: 11, fontWeight: 800, paddingTop: 1,
-        color: focused ? GREEN : 'rgba(8,33,60,0.28)',
-        transition: 'color 0.2s ease',
+    <div>
+      <div style={{
+        display: 'grid', gridTemplateColumns: '42px 1fr',
+        gap: 16, alignItems: 'flex-start',
+        borderBottom: `1.5px solid ${borderColor}`,
+        padding: '18px 0', transition: 'border-color 0.2s ease',
       }}>
-        {String(num).padStart(2, '0')}
-      </span>
-      {tag === 'textarea' ? (
-        <textarea
-          value={value}
-          onChange={onChange as React.ChangeEventHandler<HTMLTextAreaElement>}
-          onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
-          placeholder={placeholder} rows={3}
-          style={{ ...shared, resize: 'none' } as React.CSSProperties}
-        />
-      ) : (
-        <input
-          type={type} value={value}
-          onChange={onChange as React.ChangeEventHandler<HTMLInputElement>}
-          onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}
-          placeholder={placeholder}
-          style={shared}
-        />
+        <span style={{
+          fontSize: 11, fontWeight: 800, paddingTop: 1,
+          color: error ? '#dc2626' : focused ? GREEN : 'rgba(8,33,60,0.28)',
+          transition: 'color 0.2s ease',
+        }}>
+          {String(num).padStart(2, '0')}
+        </span>
+        {tag === 'textarea' ? (
+          <textarea
+            value={value}
+            onChange={onChange as React.ChangeEventHandler<HTMLTextAreaElement>}
+            onFocus={() => setFocused(true)} onBlur={handleBlur}
+            placeholder={placeholder} rows={3}
+            style={{ ...shared, resize: 'none' } as React.CSSProperties}
+          />
+        ) : (
+          <input
+            type={type} value={value}
+            onChange={onChange as React.ChangeEventHandler<HTMLInputElement>}
+            onFocus={() => setFocused(true)} onBlur={handleBlur}
+            placeholder={placeholder}
+            style={shared}
+          />
+        )}
+      </div>
+      {error && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingLeft: 58, marginTop: 7 }}>
+          <AlertCircle size={13} strokeWidth={2} color="#dc2626" style={{ flexShrink: 0 }} />
+          <span style={{ fontSize: 12, fontWeight: 500, color: '#dc2626', letterSpacing: '0.2px' }}>{error}</span>
+        </div>
       )}
     </div>
   )
@@ -427,10 +448,25 @@ function CityTag({ name, address }: { name: string; address: string }) {
 /* ─── Main Export ────────────────────────────────────────── */
 export function ContactPage() {
   usePageTitle("Contact BIVRY — Road Freight & Logistics Australia")
-  const [form, setForm] = useState({ name:'', email:'', company:'', service:'', message:'' })
+  useCanonical('/contact')
+  const [form, setForm] = useState({ name:'', email:'', phone:'', company:'', service:'', message:'' })
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted]   = useState(false)
   const [sendError, setSendError]   = useState<string | null>(null)
+  const [phoneError, setPhoneError] = useState<string | null>(null)
+
+  const validatePhone = () => {
+    if (!form.phone.trim()) {
+      setPhoneError('Please enter your phone number')
+      return false
+    }
+    if (!isValidPhone(form.phone)) {
+      setPhoneError('Please enter a valid phone number')
+      return false
+    }
+    setPhoneError(null)
+    return true
+  }
 
   const set = (key: string) => ({
     value: form[key as keyof typeof form],
@@ -455,6 +491,7 @@ export function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!form.name.trim() || !form.email.trim()) return
+    if (!validatePhone()) return
     setSubmitting(true)
     setSendError(null)
 
@@ -468,6 +505,7 @@ export function ContactPage() {
           from_name:    'Bivry Website',
           name:         form.name,
           email:        form.email,
+          phone:        form.phone,
           company:      form.company || 'Not provided',
           service_type: form.service || 'Not specified',
           message:      form.message || 'No message',
@@ -715,7 +753,7 @@ export function ContactPage() {
                   Our team will get back to you within 4 business hours. We look forward to moving freight with you.
                 </p>
                 <button
-                  onClick={() => { setSubmitted(false); setSendError(null); setForm({ name:'',email:'',company:'',service:'',message:'' }) }}
+                  onClick={() => { setSubmitted(false); setSendError(null); setPhoneError(null); setForm({ name:'',email:'',phone:'',company:'',service:'',message:'' }) }}
                   style={{
                     marginTop: 8, padding: '13px 30px',
                     background: NAVY, color: '#fff', border: 'none',
@@ -734,9 +772,18 @@ export function ContactPage() {
               >
                 <NumField num={1} placeholder="Name"        {...set('name')}    />
                 <NumField num={2} placeholder="Email"       {...set('email')}   type="email" />
-                <NumField num={3} placeholder="Company Name"     {...set('company')} />
-                <ServiceField value={form.service} onChange={v => setForm(f => ({ ...f, service: v }))} />
-                <NumField num={5} placeholder="Write Your Message"     {...set('message')} tag="textarea" />
+                <NumField
+                  num={3}
+                  placeholder="Phone Number"
+                  type="tel"
+                  value={form.phone}
+                  onChange={e => { setForm(f => ({ ...f, phone: e.target.value })); if (phoneError) setPhoneError(null) }}
+                  onBlur={() => { if (form.phone.trim()) validatePhone() }}
+                  error={phoneError}
+                />
+                <NumField num={4} placeholder="Company Name"     {...set('company')} />
+                <ServiceField num={5} value={form.service} onChange={v => setForm(f => ({ ...f, service: v }))} />
+                <NumField num={6} placeholder="Write Your Message"     {...set('message')} tag="textarea" />
 
                 <div style={{ marginTop: 44, display: 'flex', flexDirection: 'column', gap: 14, alignItems: 'flex-end' }}>
                   <button

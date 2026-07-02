@@ -8,6 +8,7 @@ import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/Inne
 import { INDUSTRIES } from '../data/industryData'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useMetaDescription } from '../hooks/useMetaDescription'
+import { useCanonical } from '../hooks/useCanonical'
 import type { Challenge, Commitment } from '../data/industryData'
 
 /* ── Challenge Card ───────────────────────────────────────── */
@@ -219,6 +220,7 @@ export function IndustryPage() {
     industry?.metaDescription ??
       'Premium road freight, warehousing and distribution across Australia. 96.2% on-time delivery, 24/7 GPS tracking. Reliable. Trackable. Trusted.'
   )
+  useCanonical(industry ? `/industries/${industry.slug}` : '/')
 
   if (!industry) return <Navigate to="/" replace />
 

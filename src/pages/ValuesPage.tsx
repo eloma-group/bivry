@@ -5,6 +5,7 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useCanonical } from '../hooks/useCanonical'
 
 const VALUES = [
   {
@@ -297,6 +298,7 @@ function ValueRow({ v, i }: { v: typeof VALUES[0]; i: number }) {
 
 export function ValuesPage() {
   usePageTitle("Our Values — BIVRY Road Freight & Logistics Australia")
+  useCanonical('/values')
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>
       <Header />

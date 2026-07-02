@@ -7,6 +7,7 @@ import { Footer } from '../components/Footer'
 import { PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useMetaDescription } from '../hooks/useMetaDescription'
+import { useCanonical } from '../hooks/useCanonical'
 
 /* SEO settings pulled directly from the source brief */
 const SEO_TITLE = 'Same Day Delivery vs Standard Freight: Which Freight Solution Is Best for Your Business?'
@@ -154,6 +155,7 @@ function CheckList({ items }: { items: string[] }) {
 export function SameDayFreightArticlePage() {
   usePageTitle(SEO_TITLE)
   useMetaDescription(META_DESCRIPTION)
+  useCanonical('/blog/same-day-delivery-vs-standard-freight')
 
   // Apply the meta keywords setting from the brief
   useEffect(() => {
