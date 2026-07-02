@@ -10,6 +10,7 @@ import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useMetaDescription } from '../hooks/useMetaDescription'
+import { useMetaKeywords } from '../hooks/useMetaKeywords'
 import { CITIES } from '../data/cityData'
 
 const SITE = 'https://bivry.com.au'
@@ -177,6 +178,7 @@ export function CityFreightPage({ slug }: { slug: string }) {
     city?.metaDescription ??
       'Premium road freight, warehousing and distribution across Australia. 96.2% on-time delivery, 24/7 GPS tracking.'
   )
+  useMetaKeywords(city?.keywords ?? [])
 
   // Canonical tag + WebPage/FAQPage JSON-LD, generated per city and cleaned up on unmount.
   useEffect(() => {

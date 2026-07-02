@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { Phone, Mail, MapPin } from 'lucide-react'
 import { navItems } from '../data/navItems'
 
@@ -188,10 +188,16 @@ export function Footer() {
                 <MapPin size={14} strokeWidth={1.5} style={{ flexShrink: 0, color: GREEN, marginTop: 3 }} />
                 <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500, lineHeight: 1.65 }}>
                   Headquartered in{' '}
-                  <a href="#" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Melbourne</a>
+                  <Link to="/freight-company-melbourne" title="Freight company in Melbourne" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Melbourne</Link>
                   {' '}(Collingwood, VIC) — serving{' '}
-                  <a href="#" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Sydney</a>
-                  , Brisbane, Perth, Adelaide &amp; all Australian states.
+                  <Link to="/freight-company-sydney" title="Freight company in Sydney" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Sydney</Link>
+                  ,{' '}
+                  <Link to="/freight-company-brisbane" title="Freight company in Brisbane" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Brisbane</Link>
+                  ,{' '}
+                  <Link to="/freight-company-perth" title="Freight company in Perth" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Perth</Link>
+                  ,{' '}
+                  <Link to="/freight-company-adelaide" title="Freight company in Adelaide" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Adelaide</Link>
+                  {' '}&amp; all Australian states.
                 </span>
               </div>
 

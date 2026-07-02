@@ -17,6 +17,8 @@ export interface City {
   airport: string         // Melbourne Airport
   metaTitle: string
   metaDescription: string
+  /** target search keywords mapped to this page's URL (for the meta keywords tag) */
+  keywords: string[]
   /** sub-line under the hero headline */
   heroSubline: string
   stats: CityStat[]
@@ -55,6 +57,13 @@ function makeCity(c: CityInput): City {
     airport,
     metaTitle: c.metaTitle,
     metaDescription: c.metaDescription,
+    // Keywords mapped to this /freight-company-<city> URL (matches the SEO keyword map).
+    keywords: [
+      `freight broker ${name}`,
+      `freight transport ${name}`,
+      `freight company ${name}`,
+      `freight management ${name}`,
+    ],
     heroSubline: `A freight company in ${name} that moves road, sea & air cargo end to end.`,
     // First two cells are port credibility facts (passed per city); last two are Bivry value-props.
     stats: [
