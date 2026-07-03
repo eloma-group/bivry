@@ -9,7 +9,9 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 /* ── Job listings ─────────────────────────────────────── */
 type Job = {
@@ -234,7 +236,8 @@ function JobCard({ job, i }: { job: Job; i: number }) {
 
 /* ── Page ─────────────────────────────────────────────── */
 export function CareersPage() {
-  usePageTitle("Careers at BIVRY — Road Freight & Logistics Jobs Australia")
+  usePageTitle(PAGE_SEO['/careers'].title)
+  useMetaDescription(PAGE_SEO['/careers'].description)
   useCanonical('/careers')
   const [activeDept, setActiveDept] = useState('All')
 

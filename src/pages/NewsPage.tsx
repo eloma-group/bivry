@@ -5,7 +5,9 @@ import { Footer } from '../components/Footer'
 import { SevenNewsFeed } from '../components/SevenNewsFeed'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const NEWS = [
   {
@@ -84,7 +86,8 @@ const PRESS_STATS = [
 ]
 
 export function NewsPage() {
-  usePageTitle("News — BIVRY Road Freight & Logistics Australia")
+  usePageTitle(PAGE_SEO['/news'].title)
+  useMetaDescription(PAGE_SEO['/news'].description)
   useCanonical('/news')
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>

@@ -4,7 +4,9 @@ import { ArrowRight, CheckCircle, ChevronDown, AlertCircle } from 'lucide-react'
 import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const NAVY  = '#08213C'
 const GREEN = '#3CB98C'
@@ -447,7 +449,8 @@ function CityTag({ name, address }: { name: string; address: string }) {
 
 /* ─── Main Export ────────────────────────────────────────── */
 export function ContactPage() {
-  usePageTitle("Contact BIVRY — Road Freight & Logistics Australia")
+  usePageTitle(PAGE_SEO['/contact'].title)
+  useMetaDescription(PAGE_SEO['/contact'].description)
   useCanonical('/contact')
   const [form, setForm] = useState({ name:'', email:'', phone:'', company:'', service:'', message:'' })
   const [submitting, setSubmitting] = useState(false)

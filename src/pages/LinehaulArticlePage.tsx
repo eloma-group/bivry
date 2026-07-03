@@ -8,11 +8,11 @@ import { PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings pulled directly from the source brief */
-const SEO_TITLE = 'Linehaul Transport Australia: Complete Guide for Businesses'
-const META_DESCRIPTION =
-  'Learn how linehaul transport works in Australia, its benefits, costs, and why businesses rely on interstate freight solutions for efficient logistics.'
+/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+const SEO_TITLE = PAGE_SEO['/blog/linehaul-transport-australia'].title
+const META_DESCRIPTION = PAGE_SEO['/blog/linehaul-transport-australia'].description
 const KEYWORDS =
   'Linehaul Transport Australia, Interstate Road Transport, Linehaul Freight, Interstate Freight Australia, Freight Transport Services, Long Distance Freight Transport, Supply Chain Logistics, Road Freight Solutions'
 

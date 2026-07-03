@@ -5,7 +5,9 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const VALUES = [
   {
@@ -297,7 +299,8 @@ function ValueRow({ v, i }: { v: typeof VALUES[0]; i: number }) {
 }
 
 export function ValuesPage() {
-  usePageTitle("Our Values — BIVRY Road Freight & Logistics Australia")
+  usePageTitle(PAGE_SEO['/values'].title)
+  useMetaDescription(PAGE_SEO['/values'].description)
   useCanonical('/values')
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>

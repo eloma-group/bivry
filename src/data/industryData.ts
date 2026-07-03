@@ -59,9 +59,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'fmcg',
     name: 'FMCG',
-    metaTitle: 'FMCG Logistics Australia — Fast-Moving Consumer Goods Freight | BIVRY',
+    metaTitle: 'FMCG Logistics Services Australia | Bivry',
     metaDescription:
-      'BIVRY delivers FMCG logistics and freight across Australia — high-volume distribution, cold chain, JIT replenishment. Serving Sydney, Melbourne, Brisbane & all Australian states. Get a free quote.',
+      'Efficient FMCG logistics solutions including warehousing, transport and distribution designed for fast-moving consumer goods.',
     group: 'Consumer',
     badge: 'Consumer · FMCG',
     heroLine1: 'FMCG',
@@ -128,6 +128,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'fashion-lifestyle',
     name: 'Fashion & Lifestyle',
+    metaTitle: 'Fashion Logistics Solutions | Bivry',
+    metaDescription:
+      'Bivry delivers fashion and lifestyle logistics services with fast distribution, inventory management and reliable freight.',
     group: 'Consumer',
     badge: 'Consumer · Fashion & Lifestyle',
     heroLine1: 'FASHION',
@@ -193,6 +196,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'retail',
     name: 'Retail',
+    metaTitle: 'Retail Logistics Solutions Australia | Bivry',
+    metaDescription:
+      'Optimise retail supply chains with reliable freight, warehousing and distribution services tailored for Australian retailers.',
     group: 'Consumer',
     badge: 'Consumer · Retail',
     heroLine1: 'RETAIL',
@@ -259,6 +265,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'restaurants-food',
     name: 'Restaurants & Food',
+    metaTitle: 'Food Logistics & Distribution | Bivry',
+    metaDescription:
+      'Reliable food and restaurant logistics services with efficient freight, warehousing and supply chain management Australia-wide.',
     group: 'Consumer',
     badge: 'Consumer · Restaurants & Food',
     heroLine1: 'FRESH',
@@ -324,9 +333,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'automotive',
     name: 'Automotive',
-    metaTitle: 'Automotive Logistics Australia — JIT Parts & Freight | BIVRY',
+    metaTitle: 'Automotive Logistics Services | Bivry',
     metaDescription:
-      'BIVRY provides automotive logistics across Melbourne, Sydney & Australia — JIT parts delivery, heavy component transport, dealer network distribution. Get a free quote.',
+      'Bivry provides automotive logistics solutions for manufacturers, suppliers and dealerships with secure freight management.',
     group: 'Industrial',
     badge: 'Industrial · Automotive',
     heroLine1: 'Automotive Logistics Company —',
@@ -398,9 +407,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'manufacturing',
     name: 'Manufacturing',
-    metaTitle: 'Manufacturing Logistics Australia — Freight & Contract Logistics | BIVRY',
+    metaTitle: 'Manufacturing Logistics Solutions | Bivry',
     metaDescription:
-      'BIVRY is a trusted logistics company for Australian manufacturers — inbound raw materials, outbound freight, contract logistics. Serving Melbourne, Sydney & nationwide. Get a free quote.',
+      'Improve manufacturing supply chains with dependable freight, warehousing and logistics services from Bivry Australia.',
     group: 'Industrial',
     badge: 'Industrial · Manufacturing',
     heroLine1: 'MANUFACTURING',
@@ -467,6 +476,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'construction',
     name: 'Construction',
+    metaTitle: 'Construction Logistics Services | Bivry',
+    metaDescription:
+      'Keep construction projects moving with reliable logistics, heavy freight and supply chain solutions from Bivry.',
     group: 'Industrial',
     badge: 'Industrial · Construction',
     heroLine1: 'MATERIALS',
@@ -533,6 +545,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'agricultural',
     name: 'Agricultural',
+    metaTitle: 'Agricultural Logistics Solutions | Bivry',
+    metaDescription:
+      'Reliable agricultural logistics and freight solutions for farming, produce and agribusiness across Australia with Bivry.',
     group: 'Industrial',
     badge: 'Industrial · Agricultural',
     heroLine1: 'HARVEST',
@@ -599,6 +614,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'pharma-healthcare',
     name: 'Pharma & Healthcare',
+    metaTitle: 'Healthcare & Pharma Logistics | Bivry',
+    metaDescription:
+      'Secure pharmaceutical and healthcare logistics with compliant transport, storage and supply chain solutions from Bivry.',
     group: 'Regulated',
     badge: 'Regulated · Pharma & Healthcare',
     heroLine1: 'PHARMA',
@@ -665,6 +683,9 @@ export const INDUSTRIES: IndustryData[] = [
   {
     slug: 'chemical',
     name: 'Chemical',
+    metaTitle: 'Chemical Logistics Solutions | Bivry',
+    metaDescription:
+      'Safe and compliant chemical logistics services with tailored freight, storage and transport solutions across Australia.',
     group: 'Regulated',
     badge: 'Regulated · Chemical',
     heroLine1: 'CHEMICAL',

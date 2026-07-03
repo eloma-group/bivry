@@ -8,6 +8,7 @@ import { NAVY, GREEN, CREAM } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number]
 
@@ -32,8 +33,8 @@ export function AboutPage() {
     }, 200)
   }
 
-  usePageTitle("About BIVRY — Australia's Road Freight & Logistics Company")
-  useMetaDescription("BIVRY is Australia's trusted road freight, warehousing and logistics company. Started in Melbourne, now serving every state — on-time delivery, 24/7 GPS tracking. Get a free quote today.")
+  usePageTitle(PAGE_SEO['/about'].title)
+  useMetaDescription(PAGE_SEO['/about'].description)
   useCanonical('/about')
 
   /* load cursive font for signature section */

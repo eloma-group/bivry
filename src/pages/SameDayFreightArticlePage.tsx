@@ -8,11 +8,11 @@ import { PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings pulled directly from the source brief */
-const SEO_TITLE = 'Same Day Delivery vs Standard Freight: Which Freight Solution Is Best for Your Business?'
-const META_DESCRIPTION =
-  'Compare Same Day Delivery and Standard Freight services to understand costs, speed, flexibility, and business benefits. Learn which freight solution suits your logistics needs and how businesses can optimise supply chain performance.'
+/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+const SEO_TITLE = PAGE_SEO['/blog/same-day-delivery-vs-standard-freight'].title
+const META_DESCRIPTION = PAGE_SEO['/blog/same-day-delivery-vs-standard-freight'].description
 const KEYWORDS =
   'Same Day Delivery, Standard Freight, Interstate Freight Services, Logistics Solutions, Freight Services, Business Logistics'
 

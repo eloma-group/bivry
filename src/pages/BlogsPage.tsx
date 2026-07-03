@@ -6,7 +6,9 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const FEATURED = {
   category: 'Logistics',
@@ -97,7 +99,8 @@ const TOPIC_CARDS: { category: string; color: string; Icon: LucideIcon; count: n
 ]
 
 export function BlogsPage() {
-  usePageTitle("BIVRY Blog — Road Freight & Logistics Insights Australia")
+  usePageTitle(PAGE_SEO['/blog'].title)
+  useMetaDescription(PAGE_SEO['/blog'].description)
   useCanonical('/blog')
   return (
     <div style={{ background: CREAM, overflowX: 'hidden' }}>

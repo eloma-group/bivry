@@ -12,14 +12,17 @@ import { Credentials3 } from '../components/Credentials3'
 import { FooterCTA } from '../components/FooterCTA'
 import { Footer } from '../components/Footer'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 // Module-level flag: persists across SPA route changes but resets on a full page reload,
 // so the splash plays once per fresh load and is skipped on internal navigation.
 let splashShown = false
 
 export function HomePage() {
-  usePageTitle("BIVRY — Australia's Road Freight & Logistics Company")
+  usePageTitle(PAGE_SEO['/'].title)
+  useMetaDescription(PAGE_SEO['/'].description)
   useCanonical('/')
   const [ready, setReady] = useState(splashShown)
 

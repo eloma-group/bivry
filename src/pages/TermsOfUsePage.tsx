@@ -1,6 +1,8 @@
 import { LegalPage, type LegalSection } from '../components/LegalPage'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const SECTIONS: LegalSection[] = [
   {
@@ -122,7 +124,8 @@ const SECTIONS: LegalSection[] = [
 ]
 
 export function TermsOfUsePage() {
-  usePageTitle("Terms of Use — BIVRY")
+  usePageTitle(PAGE_SEO['/terms-of-use'].title)
+  useMetaDescription(PAGE_SEO['/terms-of-use'].description)
   useCanonical('/terms-of-use')
   return (
     <LegalPage

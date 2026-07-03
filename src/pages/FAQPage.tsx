@@ -8,7 +8,9 @@ import { Header } from '../components/Header/Header'
 import { Footer } from '../components/Footer'
 import { InnerHero, PageCTA, NAVY, GREEN, CREAM, ease } from '../components/InnerHero'
 import { usePageTitle } from '../hooks/usePageTitle'
+import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
+import { PAGE_SEO } from '../data/seo'
 
 const FAQS = [
   { num: '01', q: 'What makes BIVRY different from other freight companies?',              a: 'At BIVRY, freight is more than just moving goods from one place to another. We focus on making the process simple, transparent, and stress-free - with clear communication and flexible transport support that works around your business needs.' },
@@ -191,7 +193,8 @@ function IndustryTile({
 
 /* ── Page ── */
 export function FAQPage() {
-  usePageTitle("FAQ — BIVRY Road Freight & Logistics Australia")
+  usePageTitle(PAGE_SEO['/faq'].title)
+  useMetaDescription(PAGE_SEO['/faq'].description)
   useCanonical('/faq')
   const [openIdx, setOpenIdx] = useState(0)
   const [isDesktop, setIsDesktop] = useState(
