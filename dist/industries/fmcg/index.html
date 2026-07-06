@@ -2,6 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Consolidate www → apex (canonical domain). Azure Static Web Apps'
+      // staticwebapp.config.json routes match on path only, so a host-based
+      // redirect must run client-side, before the app boots. Path, query and
+      // hash are preserved so deep links survive the hop.
+      (function () {
+        if (location.hostname === 'www.bivry.com.au') {
+          location.replace('https://bivry.com.au' + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
     <meta name="google-site-verification" content="tvA4Q7SVrKo43Ns_BHa7Tw2ngP1boo0NbHo7SUDhhKk" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
