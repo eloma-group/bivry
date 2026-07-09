@@ -20,7 +20,7 @@ export const services: Service[] = [
     description:
       'Reliable long-haul linehaul connecting all major Australian states. Predictable ETAs, live GPS tracking, and a dedicated fleet - so your supply chain keeps moving without compromise.',
     shortDescription: 'Interstate freight services across all Australian states',
-    imageUrl: '/images/service1.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Interstate%20Road%20Transport%201.png',
     imageAlt: 'BIVRY long-haul freight truck on open Australian highway',
   },
   {
@@ -32,7 +32,7 @@ export const services: Service[] = [
     description:
       'Multi-location, climate-controlled facilities with short and long-term options. Cross-dock, consolidation, cycle audits, and live WMS reporting - full inventory visibility at every stage.',
     shortDescription: 'Warehousing and distribution Australia — multi-location',
-    imageUrl: '/images/service2.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Warehousing%20-%20Multi%20Location%202.png',
     imageAlt: 'BIVRY multi-location warehousing facility',
   },
   {
@@ -44,7 +44,7 @@ export const services: Service[] = [
     description:
       'Seamless container movement from major Australian ports directly to your customer or facility. Full visibility from wharf to delivery with real-time tracking and customs coordination.',
     shortDescription: 'Container Movement Australia',
-    imageUrl: '/images/service3.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Container%20Movement%20Port%20to%20Customer%203.png',
     imageAlt: 'BIVRY container movement port to customer',
   },
   {
@@ -56,7 +56,7 @@ export const services: Service[] = [
     description:
       'Expert pallet re-packaging and relabelling services to meet your retailer or distributor requirements. Efficient turnaround times with quality checks at every step.',
     shortDescription: 'Pallet re-packaging Australia',
-    imageUrl: '/images/service4.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Pallet%20Re-packaging%204.png',
     imageAlt: 'BIVRY pallet re-packaging service',
   },
   {
@@ -68,7 +68,7 @@ export const services: Service[] = [
     description:
       'Fast and reliable freight distribution across metro areas. Flexible scheduling, 24/7 availability, and dedicated crews ensure your products reach every metro destination on time.',
     shortDescription: 'Metro Distribution Australia',
-    imageUrl: '/images/service5.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Metro%20Distribution%205.png',
     imageAlt: 'BIVRY metro distribution delivery',
   },
   {
@@ -80,7 +80,7 @@ export const services: Service[] = [
     description:
       'Comprehensive international freight receiving services. We handle customs clearance coordination, bonded warehousing, and distribution - bridging your global supply chain to Australian soil.',
     shortDescription: 'International Receiving Australia',
-    imageUrl: '/images/service6.jpg',
+    imageUrl: '/Bivry%20Website%20Images/International%20Receiving%206.png',
     imageAlt: 'BIVRY international receiving and customs',
   },
   {
@@ -92,7 +92,7 @@ export const services: Service[] = [
     description:
       'Flexible schedules and dedicated linehaul routes across regional corridors. Hourly or weekly pricing, complete visibility tracking - reliable freight coverage where it matters most.',
     shortDescription: 'Regional Deliveries Australia',
-    imageUrl: '/images/service7.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Regional%20Deliveries%207.png',
     imageAlt: 'BIVRY regional deliveries across Australia',
   },
   {
@@ -104,7 +104,7 @@ export const services: Service[] = [
     description:
       'Immediate on-demand truck hire for urgent or unscheduled freight. Available across metro and key regional hubs - a responsive solution when your freight needs can\'t wait.',
     shortDescription: 'Taxi Trucks Australia',
-    imageUrl: '/images/service8.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Taxi%20Trucks%208.png',
     imageAlt: 'BIVRY taxi truck on-demand service',
   },
   {
@@ -128,7 +128,7 @@ export const services: Service[] = [
     description:
       'End-to-end contract logistics solutions tailored to your operation - dedicated fleet, warehousing, and distribution under one managed agreement. Scalable, reliable, and built around your KPIs.',
     shortDescription: '3PL Australia / outsourced logistics solutions',
-    imageUrl: '/images/service10.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Contract%20Logistics%2010.png',
     imageAlt: 'BIVRY contract logistics managed service',
   },
   {
@@ -140,7 +140,7 @@ export const services: Service[] = [
     description:
       'Express crews handle time-critical consignments between major cities with real-time monitoring and secure arrival guarantees - because some freight simply cannot wait.',
     shortDescription: 'Same day delivery Australia — metro & regional',
-    imageUrl: '/images/service11.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Same%20day%2011.png',
     imageAlt: 'BIVRY same day express delivery',
   },
   {
@@ -152,7 +152,7 @@ export const services: Service[] = [
     description:
       'Guaranteed next-day delivery connecting metro and key regional hubs. Full tracking, time-definite windows, and a network built to deliver before your customers even open their doors.',
     shortDescription: 'Next Day Delivery Australia',
-    imageUrl: '/images/service12.jpg',
+    imageUrl: '/Bivry%20Website%20Images/Next%20Day%20Delivery%2012.png',
     imageAlt: 'BIVRY next day overnight delivery',
   },
 ]
