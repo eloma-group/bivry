@@ -90,4 +90,9 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       'Compare Same Day Delivery and Standard Freight services to understand costs, speed, flexibility, and business benefits. Learn which freight solution suits your logistics needs and how businesses can optimise supply chain performance.',
   },
+  '/blog/freight-broker-vs-direct-carrier-melbourne': {
+    title: 'Freight Broker vs Direct Carrier: Which Is Right?',
+    description:
+      'Comparing a freight broker in Melbourne vs a direct carrier? See the real differences in cost, tracking and freight management before you choose.',
+  },
 }

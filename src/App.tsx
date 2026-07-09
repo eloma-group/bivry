@@ -9,6 +9,7 @@ import { CaseStudiesPage } from './pages/CaseStudiesPage'
 import { BlogsPage } from './pages/BlogsPage'
 import { LinehaulArticlePage } from './pages/LinehaulArticlePage'
 import { SameDayFreightArticlePage } from './pages/SameDayFreightArticlePage'
+import { FreightBrokerArticlePage } from './pages/FreightBrokerArticlePage'
 import { NewsPage } from './pages/NewsPage'
 import { CareersPage } from './pages/CareersPage'
 import { IndustryPage } from './pages/IndustryPage'
@@ -30,6 +31,7 @@ function App() {
         <Route path="/blog" element={<BlogsPage />} />
         <Route path="/blog/linehaul-transport-australia" element={<LinehaulArticlePage />} />
         <Route path="/blog/same-day-delivery-vs-standard-freight" element={<SameDayFreightArticlePage />} />
+        <Route path="/blog/freight-broker-vs-direct-carrier-melbourne" element={<FreightBrokerArticlePage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/industries/:slug" element={<IndustryPage />} />
