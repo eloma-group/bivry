@@ -17,7 +17,7 @@ const KEYWORDS =
   'Linehaul Transport Australia, Interstate Road Transport, Linehaul Freight, Interstate Freight Australia, Freight Transport Services, Long Distance Freight Transport, Supply Chain Logistics, Road Freight Solutions'
 
 const CATEGORY = 'Logistics'
-const DATE = 'June 2025'
+const DATE = '18 June 2025'
 const READ_TIME = '6 min'
 const TAGS = ['Linehaul', 'Freight', 'Logistics']
 
@@ -128,7 +128,7 @@ export function LinehaulArticlePage() {
           <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px)', backgroundSize: '28px 28px', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', top: -100, right: -100, width: 600, height: 600, borderRadius: '50%', background: `radial-gradient(circle, ${GREEN}0D 0%, transparent 60%)`, pointerEvents: 'none' }} />
 
-          <div style={{ maxWidth: 980, margin: '0 auto', position: 'relative', zIndex: 1 }}>
+          <div style={{ maxWidth: 1760, margin: '0 auto', position: 'relative', zIndex: 1 }}>
             {/* Back link */}
             <a href="/blog" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontSize: 13, fontWeight: 700, marginBottom: 32, letterSpacing: '0.5px' }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = GREEN }}
@@ -167,8 +167,8 @@ export function LinehaulArticlePage() {
           <div className="lh-img-inner" style={{ maxWidth: 980, margin: '0 auto', transform: 'translateY(40px)' }}>
             <motion.img
               initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, ease }}
-              src="/images/linehaul-hero.jpg"
-              alt="Linehaul freight truck travelling an Australian interstate highway"
+              src="/images/bivry-truck-highway.jpg"
+              alt="Bivry branded linehaul freight truck travelling an Australian interstate highway"
               style={{ width: '100%', height: 'clamp(240px,38vw,460px)', objectFit: 'cover', borderRadius: 20, boxShadow: '0 30px 80px rgba(0,0,0,0.35)', display: 'block' }}
             />
           </div>
@@ -176,7 +176,7 @@ export function LinehaulArticlePage() {
 
         {/* ── ARTICLE BODY ─────────────────────────────────────────── */}
         <article className="lh-pad" style={{ background: CREAM, padding: 'clamp(80px,9vw,130px) clamp(24px,5vw,80px) clamp(56px,7vw,90px)' }}>
-          <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div style={{ maxWidth: 1760, margin: '0 auto' }}>
             {/* Lead */}
             <p style={{ ...BODY, fontSize: 'clamp(17px,1.4vw,21px)', color: 'rgba(8,33,60,0.78)', fontWeight: 500 }}>
               With today&rsquo;s rapidly evolving world of doing business, efficient cargo handling becomes the key to achieving high levels of customer satisfaction and overall supply chain performance. This makes the concept of linehaul transport very important for businesses functioning throughout the country.
@@ -277,7 +277,7 @@ export function LinehaulArticlePage() {
 
         {/* ── FAQ ──────────────────────────────────────────────────── */}
         <section className="lh-pad" style={{ background: '#fff', padding: 'clamp(64px,8vw,110px) clamp(24px,5vw,80px)' }}>
-          <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <div style={{ maxWidth: 1760, margin: '0 auto' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 16 }}>
               <div style={{ width: 3, height: 14, background: GREEN, borderRadius: 2 }} />
               <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(8,33,60,0.38)' }}>FAQs</span>

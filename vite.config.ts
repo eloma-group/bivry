@@ -50,15 +50,38 @@ function prerenderSeo(): Plugin {
       ]
 
       for (const route of routes) {
+        const canonical = canonicalFor(route.path)
         const html = template
           .replace(/<title>[\s\S]*?<\/title>/, `<title>${escText(route.title)}</title>`)
           .replace(
             /<meta name="description" content="[^"]*"\s*\/>/,
             `<meta name="description" content="${escAttr(route.description)}" />`,
           )
+          // Per-route Open Graph tags (social crawlers read the static HTML)
+          .replace(
+            /<meta property="og:title" content="[^"]*"\s*\/>/,
+            `<meta property="og:title" content="${escAttr(route.title)}" />`,
+          )
+          .replace(
+            /<meta property="og:description" content="[^"]*"\s*\/>/,
+            `<meta property="og:description" content="${escAttr(route.description)}" />`,
+          )
+          .replace(
+            /<meta property="og:url" content="[^"]*"\s*\/>/,
+            `<meta property="og:url" content="${escAttr(canonical)}" />`,
+          )
+          // Per-route Twitter Card tags
+          .replace(
+            /<meta name="twitter:title" content="[^"]*"\s*\/>/,
+            `<meta name="twitter:title" content="${escAttr(route.title)}" />`,
+          )
+          .replace(
+            /<meta name="twitter:description" content="[^"]*"\s*\/>/,
+            `<meta name="twitter:description" content="${escAttr(route.description)}" />`,
+          )
           .replace(
             '</head>',
-            `  <link rel="canonical" href="${canonicalFor(route.path)}" />\n  </head>`,
+            `  <link rel="canonical" href="${canonical}" />\n  </head>`,
           )
 
         const file =

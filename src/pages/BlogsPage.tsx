@@ -12,7 +12,7 @@ import { PAGE_SEO } from '../data/seo'
 
 const FEATURED = {
   category: 'Logistics',
-  date: 'June 2025',
+  date: '18 June 2025',
   readTime: '6 min',
   title: 'What Is Linehaul Transport? A Practical Guide for Australian Businesses',
   excerpt: 'Linehaul transport moves freight over long distances between depots and distribution hubs, forming the backbone of Australia\'s supply chain. This practical guide explains how it works, why it matters, and what businesses should look for when choosing a linehaul partner.',
@@ -33,7 +33,16 @@ interface Post {
 const POSTS: Post[] = [
   {
     category: 'Logistics',
-    date: 'June 2025',
+    date: '14 July 2026',
+    readTime: '7 min',
+    title: 'How Do You Choose a Freight Company for Construction Materials Delivery in Australia?',
+    excerpt: 'Construction freight carries different risks than standard parcel or pallet freight — oversized loads, tight delivery windows, and schedule-critical sequencing. This guide breaks down how to evaluate a freight partner on fleet capability, national coverage, and on-time reliability before you book your first large order.',
+    tags: ['Construction Freight', 'Materials Delivery', 'Logistics'],
+    slug: '/blog/construction-materials-delivery-freight-company-australia',
+  },
+  {
+    category: 'Logistics',
+    date: '26 June 2025',
     readTime: '5 min',
     title: 'Same Day Delivery vs Standard Freight: Which One Does Your Business Need?',
     excerpt: 'Same day delivery offers speed when it counts, while standard freight keeps costs down for less time-sensitive shipments. We break down the differences in cost, speed, and reliability so you can decide which option best fits your business needs.',
@@ -42,7 +51,7 @@ const POSTS: Post[] = [
   },
   {
     category: 'Logistics',
-    date: 'July 2026',
+    date: '8 July 2026',
     readTime: '7 min',
     title: 'Freight Broker vs Direct Carrier: Which Is Right for You?',
     excerpt: 'A freight broker arranges shipments through a network of third-party carriers, while a direct carrier owns the trucks and moves your freight itself. We break down the real differences in cost, tracking, and freight management so you can choose the right model for your business.',

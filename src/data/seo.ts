@@ -95,4 +95,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       'Comparing a freight broker in Melbourne vs a direct carrier? See the real differences in cost, tracking and freight management before you choose.',
   },
+  '/blog/construction-materials-delivery-freight-company-australia': {
+    title:
+      'How to Choose a Freight Company for Construction Materials Delivery Australia | Bivry',
+    description:
+      'Choosing freight for construction materials delivery in Australia? Compare fleet capability, national coverage, and on-time reliability before you book.',
+  },
 }

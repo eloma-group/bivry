@@ -207,6 +207,25 @@ export function FAQPage() {
     return () => window.removeEventListener('resize', handler)
   }, [])
 
+  // Inject FAQPage structured data for rich results (mirrors CityFreightPage)
+  useEffect(() => {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: FAQS.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.setAttribute('data-faq-schema', 'faq')
+    script.textContent = JSON.stringify(schema)
+    document.head.appendChild(script)
+    return () => { script.remove() }
+  }, [])
+
   const n = INDUSTRIES.length
   const arcOffsets  = INDUSTRIES.map((_, i) => isDesktop ? -Math.sin(Math.PI * i / (n - 1)) * 52 : 0)
   const rotations   = INDUSTRIES.map((_, i) => isDesktop ? (i - (n - 1) / 2) * 3.2 : 0)
