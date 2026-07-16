@@ -36,16 +36,19 @@ function prerenderSeo(): Plugin {
           path,
           title: seo.title,
           description: seo.description,
+          h1: seo.h1,
         })),
         ...INDUSTRIES.map((ind) => ({
           path: `/industries/${ind.slug}`,
           title: ind.metaTitle ?? `${ind.name} Freight & Logistics — BIVRY`,
           description: ind.metaDescription ?? DEFAULT_DESCRIPTION,
+          h1: `${ind.heroLine1} ${ind.heroLine2}`,
         })),
         ...CITIES.map((city) => ({
           path: `/${city.slug}`,
           title: city.metaTitle,
           description: city.metaDescription,
+          h1: `Freight Company in ${city.name}`,
         })),
       ]
 
@@ -82,6 +85,13 @@ function prerenderSeo(): Plugin {
           .replace(
             '</head>',
             `  <link rel="canonical" href="${canonical}" />\n  </head>`,
+          )
+          // Bake the page's single <h1> into #root so non-JS crawlers see exactly
+          // one h1 per page. It's visually hidden to avoid a flash, and React
+          // clears #root on mount — so the live DOM keeps just the app's own h1.
+          .replace(
+            '<div id="root"></div>',
+            `<div id="root"><h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">${escText(route.h1)}</h1></div>`,
           )
 
         const file =

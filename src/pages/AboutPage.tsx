@@ -149,13 +149,13 @@ export function AboutPage() {
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, ease, delay: 0.06 }}
               >
-                <h1 style={{
+                <h2 style={{
                   margin: 0,
                   fontSize: 'clamp(36px,5.5vw,78px)', fontWeight: 900, color: '#fff',
                   letterSpacing: '-0.045em', lineHeight: 0.9, textTransform: 'uppercase',
                 }}>
                   Australia's Road <span style={{ color: GREEN }}>Freight &amp; Logistics</span> Company
-                </h1>
+                </h2>
               </motion.div>
             </div>
 
@@ -307,7 +307,7 @@ export function AboutPage() {
           </div>
         </motion.div>
 
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }} transition={{ duration: 0.7, ease, delay: 0.1 }}
           style={{
@@ -317,7 +317,7 @@ export function AboutPage() {
           }}
         >
           Our Road <span style={{ color: GREEN }}>Freight &amp; Logistics</span><br />Services Across Australia
-        </motion.h1>
+        </motion.h2>
 
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 32 }}>
           <motion.div

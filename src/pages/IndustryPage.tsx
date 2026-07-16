@@ -337,13 +337,13 @@ export function IndustryPage() {
                 }}>How We Help</span>
               </div>
               {industry.challengesTitleLine1 ? (
-                <h1 style={{
+                <h2 style={{
                   fontSize: 'clamp(32px,4.5vw,72px)', fontWeight: 900,
                   color: NAVY, letterSpacing: '-0.046em', lineHeight: 0.95,
                   margin: '0 0 18px', textTransform: 'uppercase',
                 }}>
                   {industry.challengesTitleLine1}<br /><span style={{ color: GREEN }}>{industry.challengesTitleLine2}</span>
-                </h1>
+                </h2>
               ) : (
                 <h2 style={{
                   fontSize: 'clamp(32px,4.5vw,72px)', fontWeight: 900,
