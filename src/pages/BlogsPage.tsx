@@ -32,6 +32,15 @@ interface Post {
 
 const POSTS: Post[] = [
   {
+    category: 'Technology',
+    date: '21 July 2026',
+    readTime: '5 min',
+    title: 'Why a Transport Management System Matters for Australian Freight Businesses',
+    excerpt: "Australia's vast distances turn small transport inefficiencies into real cost and time losses. A transport management system pulls route planning, carrier selection, tracking, and compliance into one platform — giving freight businesses full shipment visibility, tighter cost control, and more reliable delivery.",
+    tags: ['Transport Management', 'Freight Software', 'Logistics Visibility'],
+    slug: '/blog/transport-management-system-australia',
+  },
+  {
     category: 'Logistics',
     date: '14 July 2026',
     readTime: '7 min',

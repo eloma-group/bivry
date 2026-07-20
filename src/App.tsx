@@ -11,6 +11,7 @@ import { LinehaulArticlePage } from './pages/LinehaulArticlePage'
 import { SameDayFreightArticlePage } from './pages/SameDayFreightArticlePage'
 import { FreightBrokerArticlePage } from './pages/FreightBrokerArticlePage'
 import { ConstructionFreightArticlePage } from './pages/ConstructionFreightArticlePage'
+import { TmsArticlePage } from './pages/TmsArticlePage'
 import { NewsPage } from './pages/NewsPage'
 import { CareersPage } from './pages/CareersPage'
 import { IndustryPage } from './pages/IndustryPage'
@@ -34,6 +35,7 @@ function App() {
         <Route path="/blog/same-day-delivery-vs-standard-freight" element={<SameDayFreightArticlePage />} />
         <Route path="/blog/freight-broker-vs-direct-carrier-melbourne" element={<FreightBrokerArticlePage />} />
         <Route path="/blog/construction-materials-delivery-freight-company-australia" element={<ConstructionFreightArticlePage />} />
+        <Route path="/blog/transport-management-system-australia" element={<TmsArticlePage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/industries/:slug" element={<IndustryPage />} />

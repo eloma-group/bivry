@@ -123,4 +123,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       'Choosing freight for construction materials delivery in Australia? Compare fleet capability, national coverage, and on-time reliability before you book.',
   },
+  '/blog/transport-management-system-australia': {
+    title: 'Transport Management System Australia: Why It Matters | Bivry',
+    h1: 'Why a Transport Management System Matters for Australian Freight Businesses',
+    description:
+      'Discover why a transport management system is essential for freight businesses in Australia, and how it improves visibility, cost control and delivery reliability.',
+  },
 }
