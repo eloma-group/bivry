@@ -5,7 +5,7 @@ import { useIntersection } from '../hooks/useIntersection'
 
 const GREEN = '#3CB98C'
 
-// Same content as the primary hero — unchanged.
+// Same content as the primary hero - unchanged.
 const BADGES = [
   { icon: Truck,      label: 'Interstate Road Transport',  sub: 'All Australian States'   },
   { icon: Building2,  label: 'Warehousing',               sub: 'Multi Location'          },
@@ -84,7 +84,7 @@ export function Hero8({ videos = ['/hero-merged.mp4'] }: { videos?: string[] }) 
         <source src={isSequence ? videos[clip] : videos[0]} type="video/mp4" />
       </video>
 
-      {/* Filmic gradients — left-heavy so content stays readable, image visible on the right */}
+      {/* Filmic gradients - left-heavy so content stays readable, image visible on the right */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none',
         background: `linear-gradient(100deg, rgba(4,16,29,0.94) 0%, rgba(4,16,29,0.82) 30%, rgba(4,16,29,0.45) 55%, rgba(4,16,29,0.12) 78%, transparent 100%),
@@ -130,7 +130,7 @@ export function Hero8({ videos = ['/hero-merged.mp4'] }: { videos?: string[] }) 
             fontSize: 'clamp(15px, 1.4vw, 18px)', color: 'rgba(255,255,255,0.68)',
             lineHeight: 1.75, maxWidth: '520px', margin: '0 0 38px', fontWeight: 400,
           }}>
-            BIVRY is Australia's trusted freight company — delivering premium
+            BIVRY is Australia's trusted freight company - delivering premium
             road freight, warehousing, and logistics services across every state.
           </motion.p>
 
@@ -166,7 +166,7 @@ export function Hero8({ videos = ['/hero-merged.mp4'] }: { videos?: string[] }) 
             </motion.a>
           </motion.div>
 
-          {/* Badge cards — left aligned row */}
+          {/* Badge cards - left aligned row */}
           <motion.div
             className="hero8-cards"
             variants={cardGroup}

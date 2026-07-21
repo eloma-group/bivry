@@ -4,7 +4,7 @@
 
 ## Home
 
-[BIVRY — Australia's Road Freight & Logistics Company](https://bivry.com.au/): Premium road freight, warehousing and distribution across Australia. 96.2% on-time delivery, 24/7 GPS tracking. Reliable. Trackable. Trusted.
+[BIVRY - Australia's Road Freight & Logistics Company](https://bivry.com.au/): Premium road freight, warehousing and distribution across Australia. 96.2% on-time delivery, 24/7 GPS tracking. Reliable. Trackable. Trusted.
 
 ## Blog
 
@@ -64,7 +64,7 @@
 
 ## Terms of use
 
-[Terms of Use — BIVRY](https://bivry.com.au/terms-of-use): Read the terms of use governing your access to and use of the Bivry website and our freight and logistics services.
+[Terms of Use - BIVRY](https://bivry.com.au/terms-of-use): Read the terms of use governing your access to and use of the Bivry website and our freight and logistics services.
 
 ## Industries
 
@@ -81,4 +81,4 @@
 
 ## Privacy policy
 
-[Privacy Policy — BIVRY](https://bivry.com.au/privacy-policy): Learn how Bivry collects, uses and protects your personal information across our website and freight and logistics services.
+[Privacy Policy - BIVRY](https://bivry.com.au/privacy-policy): Learn how Bivry collects, uses and protects your personal information across our website and freight and logistics services.

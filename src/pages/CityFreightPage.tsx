@@ -18,9 +18,9 @@ const SITE = 'https://bivry.com.au'
 /* icon per service row (matches the order in cityData) */
 const SERVICE_ICONS = [Truck, Ship, Plane, FileCheck2, Warehouse]
 
-/* generic "one team" pillars — design content, identical across cities */
+/* generic "one team" pillars - design content, identical across cities */
 const PILLARS = [
-  { Icon: ShieldCheck, title: 'In-house customs', text: 'Licensed brokers lodge entries through the ICS and answer to the ABF directly — no third-party handoff.' },
+  { Icon: ShieldCheck, title: 'In-house customs', text: 'Licensed brokers lodge entries through the ICS and answer to the ABF directly - no third-party handoff.' },
   { Icon: PhoneCall, title: 'One point of contact', text: 'A named person who can already see your file the moment something needs to change.' },
   { Icon: Radar, title: 'Real-time tracking', text: 'Every leg visible in one place, one invoice instead of five across the whole chain.' },
   { Icon: Globe, title: 'Road · sea · air', text: 'One team owns the shipment from pickup to delivery, across every mode it touches.' },
@@ -173,7 +173,7 @@ export function CityFreightPage({ slug }: { slug: string }) {
   const city = CITIES.find(c => c.slug === slug)
   const [openFaq, setOpenFaq] = useState(0)
 
-  usePageTitle(city ? city.metaTitle : "BIVRY — Australia's Road Freight & Logistics Company")
+  usePageTitle(city ? city.metaTitle : "BIVRY - Australia's Road Freight & Logistics Company")
   useMetaDescription(
     city?.metaDescription ??
       'Premium road freight, warehousing and distribution across Australia. 96.2% on-time delivery, 24/7 GPS tracking.'
@@ -258,7 +258,7 @@ export function CityFreightPage({ slug }: { slug: string }) {
 
           <div style={{ maxWidth: 1760, margin: '0 auto', position: 'relative', zIndex: 1 }} className="cf-inner">
             <div className="cf-overview-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,96px)', alignItems: 'start' }}>
-              {/* left — editorial heading */}
+              {/* left - editorial heading */}
               <motion.div
                 initial={{ opacity: 0, x: -28 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, ease }}
@@ -282,7 +282,7 @@ export function CityFreightPage({ slug }: { slug: string }) {
                 </div>
               </motion.div>
 
-              {/* right — body */}
+              {/* right - body */}
               <motion.div
                 initial={{ opacity: 0, x: 28 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, ease, delay: 0.12 }}
@@ -403,7 +403,7 @@ export function CityFreightPage({ slug }: { slug: string }) {
                   borderTop: i === 0 ? 'none' : '1px solid rgba(8,33,60,0.09)',
                 }}
               >
-                {/* left — index + heading (sticky on desktop) */}
+                {/* left - index + heading (sticky on desktop) */}
                 <div className="cf-ed-left">
                   <div style={{
                     fontSize: 'clamp(48px,6vw,104px)', fontWeight: 900, lineHeight: 0.85,
@@ -419,7 +419,7 @@ export function CityFreightPage({ slug }: { slug: string }) {
                   }}>{sec.heading}</h2>
                 </div>
 
-                {/* right — body */}
+                {/* right - body */}
                 <div style={{ paddingTop: 'clamp(0px,1vw,12px)' }}>
                   {sec.body.map((p, pi) => (
                     <p key={pi} style={{

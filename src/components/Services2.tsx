@@ -169,12 +169,12 @@ function ImagePanel({ index }: { index: number }) {
         </motion.div>
       </AnimatePresence>
 
-      {/* Left fade — blends into white background */}
+      {/* Left fade - blends into white background */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none',
         background: 'linear-gradient(to right, rgba(235,248,243,0.88) 0%, rgba(60,185,140,0.08) 28%, transparent 55%)',
       }} />
-      {/* Bottom fade — for caption legibility */}
+      {/* Bottom fade - for caption legibility */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none',
         background: 'linear-gradient(to top, rgba(8,33,60,0.88) 0%, rgba(8,33,60,0.25) 45%, transparent 70%)',
@@ -268,7 +268,7 @@ export function Services2() {
   }, [])
 
   // On mount: pick up cross-page serviceId from sessionStorage (set by Footer/Header/links before navigating).
-  // Note: the key is only cleared once the scroll actually fires — clearing it earlier would lose the
+  // Note: the key is only cleared once the scroll actually fires - clearing it earlier would lose the
   // pending target under StrictMode's mount→cleanup→mount double-invoke (the re-run would find nothing).
   useEffect(() => {
     const pending = sessionStorage.getItem('pendingService')
@@ -313,7 +313,7 @@ export function Services2() {
           pointerEvents: 'none', userSelect: 'none', zIndex: 0,
         }}>12</div>
 
-        {/* Left — eyebrow + large headline + count badge */}
+        {/* Left - eyebrow + large headline + count badge */}
         <div style={{
           position: 'relative', zIndex: 1,
           padding: 'clamp(28px,3.5vw,44px) clamp(24px,5vw,80px)',
@@ -357,7 +357,7 @@ export function Services2() {
           </div>
         </div>
 
-        {/* Right — description */}
+        {/* Right - description */}
         <div className="s2-intro-right" style={{
           position: 'relative', zIndex: 1,
           padding: 'clamp(28px,4vw,52px) clamp(24px,5vw,80px)',

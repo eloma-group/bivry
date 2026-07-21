@@ -56,7 +56,7 @@ function IconALC({ size = 28 }: { size?: number }) {
       <rect x="2" y="12" width="11" height="8" rx="4" stroke={BLACK} strokeWidth="1.7"/>
       <rect x="19" y="12" width="11" height="8" rx="4" stroke={BLACK} strokeWidth="1.7"/>
       <line x1="13" y1="16" x2="19" y2="16" stroke={BLACK} strokeWidth="1.7" strokeLinecap="round"/>
-      {/* upward arrow — supply chain movement */}
+      {/* upward arrow - supply chain movement */}
       <path d="M16 2v7M13 5.5L16 2l3 3.5" stroke={GOLD} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )

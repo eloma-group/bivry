@@ -4,7 +4,7 @@ import { ArrowUpRight, Radio, Clock } from 'lucide-react'
 import { NAVY, GREEN, CREAM, ease } from './InnerHero'
 import { externalNews, type ExternalNewsItem } from '../data/externalNews'
 
-/* 7NEWS business feed — bundled snapshot renders instantly, then we try a
+/* 7NEWS business feed - bundled snapshot renders instantly, then we try a
    live in-browser refresh via rss2json (CORS-friendly). If the live call
    fails (offline / rate-limited), the bundled snapshot stays on screen. */
 const LIVE_FEED = 'https://7news.com.au/business/feed'

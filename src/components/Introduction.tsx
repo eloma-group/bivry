@@ -65,7 +65,7 @@ export function Introduction() {
       if (half <= 0) return
 
       // GSAP runs on the main thread via RAF. The repeat resets x from -half
-      // to 0 atomically within one RAF callback — no compositor timing gap.
+      // to 0 atomically within one RAF callback - no compositor timing gap.
       // Since content is duplicated, -half and 0 are visually identical: seamless.
       const cfg: gsap.TweenVars = {
         x: -half,
@@ -106,7 +106,7 @@ export function Introduction() {
           marginBottom: 'clamp(64px, 9vw, 112px)',
         }}
       >
-        {/* Left — headline */}
+        {/* Left - headline */}
         <div>
           <h2 style={{
             fontSize: 'clamp(40px, 5.6vw, 74px)',
@@ -143,7 +143,7 @@ export function Introduction() {
           </h2>
         </div>
 
-        {/* Right — paragraph + tags */}
+        {/* Right - paragraph + tags */}
         <div style={{ paddingTop: 'clamp(6px, 1vw, 14px)' }}>
           <motion.p
             initial={{ opacity: 0, y: 22 }}
@@ -158,7 +158,7 @@ export function Introduction() {
             }}
           >
             Reliable transport. Real-time tracking. Tailored logistics for your business.
-            BIVRY is Australia's leading logistics company — combining smart operations
+            BIVRY is Australia's leading logistics company - combining smart operations
             with real-world reliability to move what matters, from dockyard to doorstep,
             across every state and territory.
           </motion.p>
@@ -268,7 +268,7 @@ export function Introduction() {
           onMouseEnter={() => { tween1.current?.pause(); tween2.current?.pause() }}
           onMouseLeave={() => { tween1.current?.play(); tween2.current?.play(); clearL2() }}
         >
-          {/* ── Layer 1: greyscale — hover via CSS only, zero React state ── */}
+          {/* ── Layer 1: greyscale - hover via CSS only, zero React state ── */}
           <div
             ref={track1Ref}
             style={{
@@ -291,7 +291,7 @@ export function Introduction() {
             ))}
           </div>
 
-          {/* ── Layer 2: full colour, masked to centre — purely presentational ── */}
+          {/* ── Layer 2: full colour, masked to centre - purely presentational ── */}
           <div style={{
             position: 'absolute', inset: 0, zIndex: 2,
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, transparent 24%, black 34%, black 66%, transparent 76%, transparent 100%)',

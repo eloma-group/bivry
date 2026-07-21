@@ -15,7 +15,7 @@ const ease  = [0.16, 1, 0.3, 1] as [number, number, number, number]
 
 /* Contact enquiries are emailed via Web3Forms. The recipient
    (connect@bivry.com.au) is configured on the Web3Forms account tied to
-   this access key. No backend or npm library — just a POST. */
+   this access key. No backend or npm library - just a POST. */
 const CONTACT_EMAIL = 'connect@bivry.com.au'
 const WEB3FORMS_KEY = '55ada32f-5a18-4f86-a719-e43a06b85974'
 
@@ -115,7 +115,7 @@ function ContactInfoPanel() {
         backgroundSize: '24px 24px',
       }} />
 
-      {/* Concentric circles — peek from top-right corner */}
+      {/* Concentric circles - peek from top-right corner */}
       {[300, 230, 162, 96].map((s, i) => (
         <div key={s} style={{
           position: 'absolute',
@@ -256,7 +256,7 @@ function ServiceField({ num, value, onChange }: { num: number; value: string; on
         </div>
       </div>
 
-      {/* Panel — plain div, no framer-motion, so scroll is never intercepted */}
+      {/* Panel - plain div, no framer-motion, so scroll is never intercepted */}
       {open && (
         <div
           ref={panelRef}

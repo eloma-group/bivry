@@ -31,7 +31,7 @@ export const services: Service[] = [
     title: 'Storage Built Around Your Business.',
     description:
       'Multi-location, climate-controlled facilities with short and long-term options. Cross-dock, consolidation, cycle audits, and live WMS reporting - full inventory visibility at every stage.',
-    shortDescription: 'Warehousing and distribution Australia — multi-location',
+    shortDescription: 'Warehousing and distribution Australia - multi-location',
     imageUrl: '/Bivry%20Website%20Images/Warehousing%20-%20Multi%20Location%202.png',
     imageAlt: 'BIVRY multi-location warehousing facility',
   },
@@ -139,7 +139,7 @@ export const services: Service[] = [
     title: 'Urgent Deliveries, Done Right.',
     description:
       'Express crews handle time-critical consignments between major cities with real-time monitoring and secure arrival guarantees - because some freight simply cannot wait.',
-    shortDescription: 'Same day delivery Australia — metro & regional',
+    shortDescription: 'Same day delivery Australia - metro & regional',
     imageUrl: '/Bivry%20Website%20Images/Same%20day%2011.png',
     imageAlt: 'BIVRY same day express delivery',
   },

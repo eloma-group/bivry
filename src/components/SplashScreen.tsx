@@ -57,7 +57,7 @@ export function SplashScreen({ onComplete }: { onComplete?: () => void }) {
               }}
             />
 
-            {/* Loading bar row — centered under the logo */}
+            {/* Loading bar row - centered under the logo */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -88,7 +88,7 @@ export function SplashScreen({ onComplete }: { onComplete?: () => void }) {
                   From Dockyard to Doorstep delivery
                 </span>
 
-                {/* Filled layer — clip sweeps from left to right */}
+                {/* Filled layer - clip sweeps from left to right */}
                 <motion.span
                   initial={{ clipPath: 'inset(0 100% 0 0)' }}
                   animate={startFill ? { clipPath: 'inset(0 0% 0 0)' } : {}}

@@ -338,13 +338,13 @@ export const INDUSTRIES: IndustryData[] = [
       'Bivry provides automotive logistics solutions for manufacturers, suppliers and dealerships with secure freight management.',
     group: 'Industrial',
     badge: 'Industrial · Automotive',
-    heroLine1: 'Automotive Logistics Company —',
+    heroLine1: 'Automotive Logistics Company -',
     heroLine2: 'Melbourne, Sydney & Australia-Wide',
     heroTitleSize: 'clamp(32px,5vw,68px)',
     heroTitleLineHeight: 1.08,
     greenLine: 2,
     heroDescription:
-      'Just-in-time parts delivery, heavy component transport, and dealer network distribution across Melbourne, Sydney and Australia — logistics built to keep production lines running.',
+      'Just-in-time parts delivery, heavy component transport, and dealer network distribution across Melbourne, Sydney and Australia - logistics built to keep production lines running.',
     heroMeta: [
       { label: 'Sector', value: 'Automotive' },
       { label: 'Capability', value: 'JIT · Heavy Components · Dealer Networks' },
@@ -352,9 +352,9 @@ export const INDUSTRIES: IndustryData[] = [
       { label: 'Mode', value: 'Road · Container · Tow' },
     ],
     overview: {
-      eyebrow: 'Automotive Logistics Company — Melbourne & Sydney',
+      eyebrow: 'Automotive Logistics Company - Melbourne & Sydney',
       heading: 'PARTS IN. LINE RUNNING.',
-      body: 'The automotive industry operates on zero-tolerance schedules. A missing component stops a production line — and costs thousands per minute. BIVRY is a trusted automotive logistics company serving Melbourne, Sydney and Australia-wide, with just-in-time delivery, specialist vehicle logistics, and accurate parts distribution that keep your operations moving without interruption.',
+      body: 'The automotive industry operates on zero-tolerance schedules. A missing component stops a production line - and costs thousands per minute. BIVRY is a trusted automotive logistics company serving Melbourne, Sydney and Australia-wide, with just-in-time delivery, specialist vehicle logistics, and accurate parts distribution that keep your operations moving without interruption.',
       keyPoints: [
         'Zero-tolerance JIT delivery schedules',
         'Heavy component & assembly transport',
@@ -362,9 +362,9 @@ export const INDUSTRIES: IndustryData[] = [
         'On time delivery for specialist tow and taxi truck operations',
       ],
     },
-    challengesTitleLine1: 'Automotive Freight Challenges We Solve —',
+    challengesTitleLine1: 'Automotive Freight Challenges We Solve -',
     challengesTitleLine2: 'Melbourne & Sydney',
-    challengesSubtext: "Every automotive operation faces unique freight challenges. Here's how BIVRY, a leading transport company in Australia, addresses them — nationwide.",
+    challengesSubtext: "Every automotive operation faces unique freight challenges. Here's how BIVRY, a leading transport company in Australia, addresses them - nationwide.",
     challenges: [
       {
         Icon: Clock,
@@ -373,7 +373,7 @@ export const INDUSTRIES: IndustryData[] = [
       },
       {
         Icon: Truck,
-        title: 'Heavy Component Road Transport — Australia',
+        title: 'Heavy Component Road Transport - Australia',
         desc: 'Safe movement of engine components, chassis parts, and large assemblies. Specialist equipment, securing protocols, and trained drivers for every heavy freight movement.',
       },
       {
@@ -416,7 +416,7 @@ export const INDUSTRIES: IndustryData[] = [
     heroLine2: 'SUPPLY CHAINS.',
     greenLine: 2,
     heroDescription:
-      'Inbound raw materials, outbound finished goods, bulk freight, and contract logistics — end-to-end solutions for manufacturers across Melbourne, Sydney and Australia-wide.',
+      'Inbound raw materials, outbound finished goods, bulk freight, and contract logistics - end-to-end solutions for manufacturers across Melbourne, Sydney and Australia-wide.',
     heroMeta: [
       { label: 'Sector', value: 'Manufacturing' },
       { label: 'Capability', value: 'Inbound · Outbound · Bulk · Contract' },
@@ -426,7 +426,7 @@ export const INDUSTRIES: IndustryData[] = [
     overview: {
       eyebrow: 'Manufacturing Logistics',
       heading: 'RAW IN. FINISHED OUT. ON TIME.',
-      body: 'Manufacturing supply chains require a logistics company that can handle both ends of the equation — reliable inbound raw materials to keep production uninterrupted, and fast outbound distribution to get finished goods into market. BIVRY delivers both, backed by contract logistics SLAs aligned to your production schedule.',
+      body: 'Manufacturing supply chains require a logistics company that can handle both ends of the equation - reliable inbound raw materials to keep production uninterrupted, and fast outbound distribution to get finished goods into market. BIVRY delivers both, backed by contract logistics SLAs aligned to your production schedule.',
       keyPoints: [
         'Reliable inbound raw material freight',
         'Fast finished-goods outbound distribution',

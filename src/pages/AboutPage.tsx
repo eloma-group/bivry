@@ -60,12 +60,12 @@ export function AboutPage() {
       <Header />
 
       {/* ════════════════════════════════════════════
-          SECTION 1 — BANNER  (logo shrinks on scroll)
+          SECTION 1 - BANNER  (logo shrinks on scroll)
          ════════════════════════════════════════════ */}
       <div ref={bannerRef} style={{ height: '100vh' }}>
         <div style={{ position: 'sticky', top: 0, height: '100vh', overflow: 'hidden', background: CREAM }}>
 
-          {/* BIVRY wordmark — huge, scales to tiny on scroll */}
+          {/* BIVRY wordmark - huge, scales to tiny on scroll */}
           <motion.div
             style={{
               position: 'absolute',
@@ -101,12 +101,12 @@ export function AboutPage() {
               marginTop: 'clamp(60px,10vh,120px)',
               paddingLeft: 'clamp(20px,3vw,48px)',
             }}>
-              Australia's trusted road freight and logistics network — built for reliability, speed and GPS-tracked delivery.
+              Australia's trusted road freight and logistics network - built for reliability, speed and GPS-tracked delivery.
             </h1>
 
             <div style={{ paddingLeft: 'clamp(20px,3vw,48px)' }}>
               <p style={{ fontSize: 'clamp(14px, 1.05vw, 20px)', color: 'rgba(8,33,60,0.48)', lineHeight: 1.8, margin: 0, maxWidth: 'clamp(360px, 30vw, 520px)' }}>
-                Born in Melbourne with one truck. Today BIVRY is a national road freight and logistics company — serving businesses of every size across Sydney, Melbourne, Brisbane, Perth, Adelaide and every Australian state and territory.
+                Born in Melbourne with one truck. Today BIVRY is a national road freight and logistics company - serving businesses of every size across Sydney, Melbourne, Brisbane, Perth, Adelaide and every Australian state and territory.
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export function AboutPage() {
       </div>
 
       {/* ════════════════════════════════════════════
-          SECTION 2 — MANIFESTO + CAPABILITIES
+          SECTION 2 - MANIFESTO + CAPABILITIES
          ════════════════════════════════════════════ */}
       <section className="manifesto-section" style={{ background: NAVY, padding: 'clamp(72px,9vw,128px) clamp(24px,5vw,80px)' }}>
         <div className="manifesto-inner" style={{ maxWidth: 1760, margin: '0 auto' }}>
@@ -165,7 +165,7 @@ export function AboutPage() {
               style={{ paddingTop: 'clamp(0px,3vw,48px)' }}
             >
               <p style={{ fontSize: 'clamp(14px,1.15vw,18px)', color: 'rgba(255,255,255,0.52)', lineHeight: 1.88, margin: '0 0 36px' }}>
-                We started with one truck and one promise: your freight arrives on time. Today BIVRY is one of Australia's most trusted road freight and logistics companies — connecting businesses from Sydney to Perth, Broome to Brisbane, with on-time delivery and 24/7 GPS tracking across every Australian state.
+                We started with one truck and one promise: your freight arrives on time. Today BIVRY is one of Australia's most trusted road freight and logistics companies - connecting businesses from Sydney to Perth, Broome to Brisbane, with on-time delivery and 24/7 GPS tracking across every Australian state.
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                 <div style={{ height: 1, flex: 1, background: `${GREEN}44` }} />
@@ -179,7 +179,7 @@ export function AboutPage() {
           {/* Bottom row: capability strips */}
           <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             {[
-              { label: 'Road Freight',         desc: 'Interstate road transport Australia — B-double to van, all states' },
+              { label: 'Road Freight',         desc: 'Interstate road transport Australia - B-double to van, all states' },
               { label: 'Same-Day Delivery',     desc: 'When hours count - local and regional' },
               { label: 'Warehousing',           desc: 'Pick, pack and dispatch from our depots' },
               { label: 'Contract Logistics',    desc: 'Dedicated freight solutions at scale' },
@@ -211,12 +211,12 @@ export function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════
-          SECTION 3 — SIGNATURE: TRUSTED Partnerships.
+          SECTION 3 - SIGNATURE: TRUSTED Partnerships.
          ════════════════════════════════════════════ */}
       <section style={{ padding: 'clamp(80px,10vw,140px) clamp(24px,4vw,64px)', background: '#fff' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '55% 1fr', gap: 'clamp(40px,5vw,80px)', alignItems: 'start' }} className="sig-grid">
 
-          {/* LEFT — headline + cursive */}
+          {/* LEFT - headline + cursive */}
           <div>
             {['MOST OF OUR', 'NEW CLIENTS', 'COME FROM', 'TRUSTED'].map((line, i) => (
               <motion.div key={line}
@@ -247,22 +247,22 @@ export function AboutPage() {
             </motion.div>
           </div>
 
-          {/* RIGHT — body + trust signals */}
+          {/* RIGHT - body + trust signals */}
           <motion.div
             initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.8, ease, delay: 0.2 }}
             style={{ paddingTop: 'clamp(8px,2vw,32px)' }}
           >
             <p style={{ fontSize: 'clamp(16px,1.45vw,21px)', color: 'rgba(8,33,60,0.58)', lineHeight: 1.88, margin: '0 0 40px' }}>
-              That's how an Australian road freight and logistics company that started with one truck built a national network: through reliability, consistency, and a shared commitment to on-time delivery across Australia. Route by route, client after client — let the work speak for itself.
+              That's how an Australian road freight and logistics company that started with one truck built a national network: through reliability, consistency, and a shared commitment to on-time delivery across Australia. Route by route, client after client - let the work speak for itself.
             </p>
 
             {/* Trust signals */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 0, borderTop: '1px solid rgba(8,33,60,0.08)' }}>
               {[
-                { title: 'Word of mouth', sub: 'Most new clients arrive through referrals — Australian businesses trust BIVRY for road freight and logistics.' },
+                { title: 'Word of mouth', sub: 'Most new clients arrive through referrals - Australian businesses trust BIVRY for road freight and logistics.' },
                 { title: 'Long-term accounts', sub: 'The majority of our clients have been with us for years.' },
-                { title: 'No lock-in contracts', sub: 'We earn your business every single delivery — road freight and logistics services across Australia, no lock-in.' },
+                { title: 'No lock-in contracts', sub: 'We earn your business every single delivery - road freight and logistics services across Australia, no lock-in.' },
               ].map((item, i) => (
                 <motion.div key={item.title}
                   initial={{ opacity: 0, x: 16 }} whileInView={{ opacity: 1, x: 0 }}
@@ -291,7 +291,7 @@ export function AboutPage() {
       </section>
 
       {/* ════════════════════════════════════════════
-          SECTION 4 — WHAT WE DO
+          SECTION 4 - WHAT WE DO
          ════════════════════════════════════════════ */}
       <section style={{ padding: '0 clamp(24px,4vw,64px) clamp(80px,10vw,140px)', background: '#fff' }}>
 
@@ -326,7 +326,7 @@ export function AboutPage() {
             style={{ maxWidth: 'clamp(260px,30vw,420px)', paddingTop: 'clamp(16px,2vw,28px)', position: 'relative', zIndex: 2 }}
           >
             <p style={{ fontSize: 'clamp(15px,1.3vw,19px)', color: NAVY, lineHeight: 1.8, marginBottom: 32 }}>
-              Reliability is nothing without speed. We deliver both. Road freight, same-day delivery, warehousing and contract logistics — all under one roof, across every Australian state. From Sydney to Perth, Melbourne to Adelaide — BIVRY's freight network runs 24/7.
+              Reliability is nothing without speed. We deliver both. Road freight, same-day delivery, warehousing and contract logistics - all under one roof, across every Australian state. From Sydney to Perth, Melbourne to Adelaide - BIVRY's freight network runs 24/7.
             </p>
             <a href="/#services" onClick={goToServices}
               style={{

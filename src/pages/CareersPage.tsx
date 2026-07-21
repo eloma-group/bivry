@@ -23,18 +23,10 @@ type Job = {
 }
 
 const JOBS: Job[] = [
-  { title: 'Head of Freight Operations',        dept: 'Operations',           type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['Leadership', 'Strategy', 'Fleet Management']     },
-  { title: 'Senior B-Double Truck Driver',      dept: 'Transport',            type: 'Full-Time', location: 'Multiple Depots',   tags: ['HC Licence', 'Interstate', 'Night Runs']         },
+  { title: 'Business Development Manager',      dept: 'Sales',                type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['B2B', 'Freight Industry', 'Hunter Role']         },
   { title: 'Fleet & Logistics Coordinator',     dept: 'Fleet',                type: 'Full-Time', location: 'Dandenong, VIC',    tags: ['Routing', 'TMS', 'Scheduling']                   },
   { title: 'Warehouse Supervisor',              dept: 'Warehousing',          type: 'Full-Time', location: 'Laverton North, VIC', tags: ['HACCP', 'Forklift Licence', 'Pick & Pack']     },
-  { title: 'Customer Service & Dispatch',       dept: 'Customer Experience',  type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['CRM', 'Booking Systems', 'Communication']        },
-  { title: 'Business Development Manager',      dept: 'Sales',                type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['B2B', 'Freight Industry', 'Hunter Role']         },
-  { title: 'WHS & Compliance Officer',          dept: 'Safety',               type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['Chain of Responsibility', 'Auditing', 'CoR']     },
-  { title: 'Route Planner / Load Optimiser',    dept: 'Operations',           type: 'Full-Time', location: 'Dandenong, VIC',    tags: ['Load Planning', 'GPS', 'Data Analysis']          },
-  { title: 'Refrigerated Transport Driver',     dept: 'Transport',            type: 'Full-Time', location: 'Multiple Depots',   tags: ['Cold Chain', 'MC/HC Licence', 'Food Grade']      },
   { title: 'Freight Account Manager',           dept: 'Sales',                type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['Account Growth', 'Retention', 'Reporting']       },
-  { title: 'Depot Operations Coordinator',      dept: 'Operations',           type: 'Contract',  location: 'Truganina, VIC',    tags: ['Inbound/Outbound', 'Stocktake', 'Manifesting']   },
-  { title: 'Customs & Documentation Specialist',dept: 'International',        type: 'Full-Time', location: 'Melbourne, VIC',    tags: ['Import/Export', 'Customs Clearance', 'SAP']      },
 ]
 
 const DEPTS = ['All', 'Operations', 'Transport', 'Fleet', 'Warehousing', 'Customer Experience', 'Sales', 'Safety', 'International']
@@ -152,7 +144,7 @@ function JobCard({ job, i }: { job: Job; i: number }) {
         cursor: 'pointer',
       }}
     >
-      {/* Top accent bar — grows + glows */}
+      {/* Top accent bar - grows + glows */}
       <div style={{
         height: hov ? 5 : 3, background: color, flexShrink: 0,
         boxShadow: hov ? `0 3px 14px ${color}80` : 'none',
@@ -161,7 +153,7 @@ function JobCard({ job, i }: { job: Job; i: number }) {
 
       <div style={{ padding: 'clamp(20px,2vw,28px)', flex: 1, display: 'flex', flexDirection: 'column' }}>
 
-        {/* Dept pill — fills solid on hover */}
+        {/* Dept pill - fills solid on hover */}
         <div style={{ marginBottom: 14 }}>
           <span style={{
             fontSize: 9, fontWeight: 800, letterSpacing: '1.5px', textTransform: 'uppercase',
@@ -201,7 +193,7 @@ function JobCard({ job, i }: { job: Job; i: number }) {
           </span>
         </div>
 
-        {/* Tags — tint to dept color on hover */}
+        {/* Tags - tint to dept color on hover */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 22 }}>
           {job.tags.map(tag => (
             <span key={tag} style={{
@@ -215,7 +207,7 @@ function JobCard({ job, i }: { job: Job; i: number }) {
           ))}
         </div>
 
-        {/* Apply — becomes a pill button on hover */}
+        {/* Apply - becomes a pill button on hover */}
         <a href="mailto:connect@bivry.com.au" style={{
           display: 'inline-flex', alignItems: 'center', gap: 6,
           fontSize: 12, fontWeight: 800, color: '#fff',

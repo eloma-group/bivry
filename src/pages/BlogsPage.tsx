@@ -12,7 +12,7 @@ import { PAGE_SEO } from '../data/seo'
 
 const FEATURED = {
   category: 'Logistics',
-  date: '18 June 2025',
+  date: '18 June 2026',
   readTime: '6 min',
   title: 'What Is Linehaul Transport? A Practical Guide for Australian Businesses',
   excerpt: 'Linehaul transport moves freight over long distances between depots and distribution hubs, forming the backbone of Australia\'s supply chain. This practical guide explains how it works, why it matters, and what businesses should look for when choosing a linehaul partner.',
@@ -26,7 +26,7 @@ interface Post {
   title: string
   excerpt: string
   tags: string[]
-  /** Optional internal route — when set, the card links to a full article page. */
+  /** Optional internal route - when set, the card links to a full article page. */
   slug?: string
 }
 
@@ -36,7 +36,7 @@ const POSTS: Post[] = [
     date: '21 July 2026',
     readTime: '5 min',
     title: 'Why a Transport Management System Matters for Australian Freight Businesses',
-    excerpt: "Australia's vast distances turn small transport inefficiencies into real cost and time losses. A transport management system pulls route planning, carrier selection, tracking, and compliance into one platform — giving freight businesses full shipment visibility, tighter cost control, and more reliable delivery.",
+    excerpt: "Australia's vast distances turn small transport inefficiencies into real cost and time losses. A transport management system pulls route planning, carrier selection, tracking, and compliance into one platform - giving freight businesses full shipment visibility, tighter cost control, and more reliable delivery.",
     tags: ['Transport Management', 'Freight Software', 'Logistics Visibility'],
     slug: '/blog/transport-management-system-australia',
   },
@@ -45,7 +45,7 @@ const POSTS: Post[] = [
     date: '14 July 2026',
     readTime: '7 min',
     title: 'How Do You Choose a Freight Company for Construction Materials Delivery in Australia?',
-    excerpt: 'Construction freight carries different risks than standard parcel or pallet freight — oversized loads, tight delivery windows, and schedule-critical sequencing. This guide breaks down how to evaluate a freight partner on fleet capability, national coverage, and on-time reliability before you book your first large order.',
+    excerpt: 'Construction freight carries different risks than standard parcel or pallet freight - oversized loads, tight delivery windows, and schedule-critical sequencing. This guide breaks down how to evaluate a freight partner on fleet capability, national coverage, and on-time reliability before you book your first large order.',
     tags: ['Construction Freight', 'Materials Delivery', 'Logistics'],
     slug: '/blog/construction-materials-delivery-freight-company-australia',
   },
@@ -128,7 +128,7 @@ export function BlogsPage() {
               style={{ borderRadius: 24, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', display: 'grid', gridTemplateColumns: '1fr 380px' }}
               className="featured-card"
             >
-              {/* LEFT — cream content panel */}
+              {/* LEFT - cream content panel */}
               <div style={{ background: CREAM, padding: 'clamp(40px,4vw,64px)', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
                 {/* Faint watermark number */}
                 <div style={{ position: 'absolute', top: -20, right: -12, fontSize: 'clamp(80px,14vw,200px)', fontWeight: 900, color: 'rgba(8,33,60,0.04)', letterSpacing: '-0.05em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>01</div>
@@ -180,7 +180,7 @@ export function BlogsPage() {
                 </div>
               </div>
 
-              {/* RIGHT — dark visual panel */}
+              {/* RIGHT - dark visual panel */}
               <div style={{ background: '#061828', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 'clamp(32px,3vw,48px)' }}>
                 {/* Diagonal stripe texture */}
                 <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 32px)', pointerEvents: 'none' }} />

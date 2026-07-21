@@ -24,7 +24,7 @@ const CITIES = [
 
 const FEATURES = [
   { Icon: Headphones,    line1: '24×7',             line2: 'Customer Support', desc: 'Round-the-clock support from our dedicated freight specialists across every time zone.' },
-  { Icon: MapPin,        line1: 'GPS Freight Tracking', line2: 'Australia',       desc: 'GPS-powered live visibility on every shipment — 24/7 GPS freight tracking across Australia.' },
+  { Icon: MapPin,        line1: 'GPS Freight Tracking', line2: 'Australia',       desc: 'GPS-powered live visibility on every shipment - 24/7 GPS freight tracking across Australia.' },
   { Icon: Globe2,        line1: 'Global Freight',    line2: 'Network',          desc: '10 international corridors from Sydney spanning 5 continents.' },
   { Icon: UserCheck,     line1: 'Dedicated Account', line2: 'Manager',          desc: 'A personal freight specialist who knows your cargo and your business.' },
   { Icon: ShieldCheck,   line1: 'Secure Cargo',      line2: 'Handling',         desc: 'Full insurance coverage and tamper-proof transit protocols on every route.' },
@@ -200,7 +200,7 @@ export function GlobalNetwork2() {
 
       <style>{`
         /* ══════════════════════════════════════════════
-           SECTION — desktop default (≥ 1025px)
+           SECTION - desktop default (≥ 1025px)
            Cap at 860 px so 4K / 32-inch screens don't
            balloon the feature cards to absurd heights.
            ══════════════════════════════════════════════ */
@@ -311,7 +311,7 @@ export function GlobalNetwork2() {
 
         /* ════════════════════════════════════════════
            Tablet (≤ 1024 px)
-           Stack panel on top, grid below — 2 columns.
+           Stack panel on top, grid below - 2 columns.
            ════════════════════════════════════════════ */
         @media (max-width: 1024px) {
           .gn2-section {
@@ -357,7 +357,7 @@ export function GlobalNetwork2() {
         }
 
         /* ════════════════════════════════════════════
-           Small mobile  (≤ 400 px) — single column
+           Small mobile  (≤ 400 px) - single column
            ════════════════════════════════════════════ */
         @media (max-width: 400px) {
           .gn2-feat-grid {

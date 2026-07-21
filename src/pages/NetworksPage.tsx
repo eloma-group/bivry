@@ -34,7 +34,7 @@ const NETWORK_PILLARS = [
 ]
 
 
-/* ── Partner Card — spotlight + 3D tilt ── */
+/* ── Partner Card - spotlight + 3D tilt ── */
 function PartnerCard({ p, i }: { p: typeof PARTNERS[0]; i: number }) {
   const [mouse, setMouse] = useState({ x: 50, y: 50, hov: false })
 
@@ -124,7 +124,7 @@ function PartnerCard({ p, i }: { p: typeof PARTNERS[0]; i: number }) {
           </div>
         )}
 
-        {/* Full-card slide-up overlay — frosted glass */}
+        {/* Full-card slide-up overlay - frosted glass */}
         <div style={{
           position: 'absolute', inset: 0,
           background: 'rgba(248,252,250,0.94)',
@@ -146,7 +146,7 @@ function PartnerCard({ p, i }: { p: typeof PARTNERS[0]; i: number }) {
             userSelect: 'none', pointerEvents: 'none',
           }}>{p.name[0].toUpperCase()}</div>
 
-          {/* TOP ROW — category pill + arrow */}
+          {/* TOP ROW - category pill + arrow */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
             <div style={{
               display: 'inline-flex', alignItems: 'center', gap: 6,
@@ -166,7 +166,7 @@ function PartnerCard({ p, i }: { p: typeof PARTNERS[0]; i: number }) {
             </div>
           </div>
 
-          {/* BOTTOM — name + rule + desc */}
+          {/* BOTTOM - name + rule + desc */}
           <div style={{ position: 'relative', zIndex: 1 }}>
             {/* Animated green rule */}
             <div style={{
@@ -251,7 +251,7 @@ export function NetworksPage() {
           ]}
         />
 
-        {/* ── 1. NETWORK PILLARS — Asymmetric split ── */}
+        {/* ── 1. NETWORK PILLARS - Asymmetric split ── */}
         <section style={{ background: '#fff', padding: 'clamp(56px,7vw,88px) 0', overflow: 'hidden' }}>
           <div className="net-inner" style={{ padding: '0 clamp(24px,5vw,80px)' }}>
             <div className="pillars-split" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 'clamp(32px,6vw,96px)', alignItems: 'start' }}>
@@ -346,7 +346,7 @@ export function NetworksPage() {
           </div>
         </section>
 
-        {/* ── 3. NATIONAL DEPOTS — Geographic grid ── */}
+        {/* ── 3. NATIONAL DEPOTS - Geographic grid ── */}
         <section style={{ background: CREAM, padding: 'clamp(72px,10vw,120px) clamp(24px,5vw,80px)' }}>
           <div className="net-inner">
             <div className="depots-split" style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: 'clamp(32px,5vw,80px)', alignItems: 'start' }}>
@@ -396,7 +396,7 @@ export function NetworksPage() {
           </div>
         </section>
 
-        {/* ── 4. REGIONAL COVERAGE — Bento grid ── */}
+        {/* ── 4. REGIONAL COVERAGE - Bento grid ── */}
         <section style={{ background: '#fff', padding: 'clamp(72px,10vw,120px) clamp(24px,5vw,80px)' }}>
           <div className="net-inner">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, ease }} style={{ marginBottom: 52 }}>
@@ -412,7 +412,7 @@ export function NetworksPage() {
             {/* Bento: row 1 = Eastern(span2) + Remote(span1), row 2 = WA + SA + QLD */}
             <div className="coverage-bento" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 14 }}>
 
-              {/* Eastern Seaboard — big feature tile */}
+              {/* Eastern Seaboard - big feature tile */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.6, ease }}
@@ -471,9 +471,9 @@ export function NetworksPage() {
           </div>
         </section>
 
-        {/* ── 5. TRUST & RECOGNITION — Credential showcase (light) ── */}
+        {/* ── 5. TRUST & RECOGNITION - Credential showcase (light) ── */}
         <section style={{ background: '#fff', padding: 'clamp(72px,10vw,120px) clamp(24px,5vw,80px)', position: 'relative', overflow: 'hidden' }}>
-          {/* Ghost watermark rings — purely decorative */}
+          {/* Ghost watermark rings - purely decorative */}
           <div style={{ position: 'absolute', right: 'clamp(-100px,-10vw,-40px)', top: '50%', transform: 'translateY(-50%)', width: 'clamp(300px,40vw,560px)', height: 'clamp(300px,40vw,560px)', borderRadius: '50%', border: '1px solid rgba(8,33,60,0.04)', pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', right: 'clamp(-60px,-6vw,0px)', top: '50%', transform: 'translateY(-50%)', width: 'clamp(200px,28vw,400px)', height: 'clamp(200px,28vw,400px)', borderRadius: '50%', border: '1px dashed rgba(8,33,60,0.05)', pointerEvents: 'none' }} />
 
@@ -482,7 +482,7 @@ export function NetworksPage() {
             {/* Top split: heading left, credential cards right */}
             <div className="recognition-split" style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 'clamp(32px,6vw,88px)', marginBottom: 'clamp(48px,6vw,72px)', alignItems: 'start' }}>
 
-              {/* LEFT — heading + inline stats */}
+              {/* LEFT - heading + inline stats */}
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.75, ease }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 9, marginBottom: 22 }}>
                   <div style={{ width: 3, height: 14, background: GREEN, borderRadius: 2 }} />
@@ -521,7 +521,7 @@ export function NetworksPage() {
                 </div>
               </motion.div>
 
-              {/* RIGHT — credential badge cards */}
+              {/* RIGHT - credential badge cards */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
                 {/* UN Global Compact */}
@@ -618,7 +618,7 @@ export function NetworksPage() {
         .net-inner { max-width: 1760px; margin: 0 auto; }
         @media (min-width: 2560px) { .net-inner { max-width: 2400px; } }
 
-        /* ─── Section 1: Pillar cards — Border flash + lift ─── */
+        /* ─── Section 1: Pillar cards - Border flash + lift ─── */
         .np-card {
           transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease, background 0.32s ease;
           cursor: default;
@@ -638,7 +638,7 @@ export function NetworksPage() {
         /* ─── Section 2: Partner cards ─── */
         .carrier-grid { overflow: visible !important; }
 
-        /* ─── Section 3: Depot cards — Glow ring ─── */
+        /* ─── Section 3: Depot cards - Glow ring ─── */
         .depot-card {
           transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
           cursor: default;
@@ -652,7 +652,7 @@ export function NetworksPage() {
           box-shadow: 0 0 0 2.5px #3CB98C, 0 20px 50px rgba(60,185,140,0.28) !important;
         }
 
-        /* ─── Section 4: Coverage bento — Diagonal gradient sweep ─── */
+        /* ─── Section 4: Coverage bento - Diagonal gradient sweep ─── */
         .coverage-feature {
           transition: transform 0.35s ease, box-shadow 0.35s ease;
           cursor: default;
@@ -693,7 +693,7 @@ export function NetworksPage() {
         }
         .cov-card:hover::after { opacity: 1; }
 
-        /* ─── Section 5: Trust cards — Shimmer sweep ─── */
+        /* ─── Section 5: Trust cards - Shimmer sweep ─── */
         .trust-card {
           transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
           cursor: default;

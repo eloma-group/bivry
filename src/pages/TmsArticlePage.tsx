@@ -10,7 +10,7 @@ import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
 import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+/* SEO settings - title/description shared with the prerender via PAGE_SEO */
 const SEO_TITLE = PAGE_SEO['/blog/transport-management-system-australia'].title
 const META_DESCRIPTION = PAGE_SEO['/blog/transport-management-system-australia'].description
 const KEYWORDS =
@@ -33,7 +33,7 @@ function InlineLink({ to, children }: { to: string; children: React.ReactNode })
   )
 }
 
-/* External link — opens in a new tab (e.g. the NHVR) */
+/* External link - opens in a new tab (e.g. the NHVR) */
 function ExternalLink({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <a
@@ -60,7 +60,7 @@ const BODY: React.CSSProperties = {
 const KEY_FACTS = [
   'A transport management system (TMS) brings route planning, carrier selection, tracking, and freight documentation into a single platform.',
   "Australia's vast distances and limited route redundancy make small transport inefficiencies unusually costly.",
-  'The National Heavy Vehicle Regulator sets the compliance standards Australian freight operators must meet — a well-implemented TMS makes staying on top of them far easier.',
+  'The National Heavy Vehicle Regulator sets the compliance standards Australian freight operators must meet - a well-implemented TMS makes staying on top of them far easier.',
   'Smaller businesses often see the biggest relative improvement, since a TMS removes manual coordination that eats up staff time.',
   'Full shipment visibility reduces "where is my delivery" queries for both the business and its customers.',
 ]
@@ -77,13 +77,13 @@ const BENEFITS = [
   'Fewer missed deliveries, since delays are flagged early instead of discovered after the fact.',
   'Full shipment visibility for both the business and its customers, reducing "where is my delivery" queries.',
   'Simplified compliance and documentation, cutting down on manual admin and error risk.',
-  'Data businesses can actually use — identifying which routes, carriers, or time slots are underperforming.',
+  'Data businesses can actually use - identifying which routes, carriers, or time slots are underperforming.',
 ]
 
 const FAQS = [
   {
     q: 'What is a transport management system?',
-    a: 'A transport management system is software that helps businesses plan, execute, and track the movement of freight — covering route planning, carrier selection, real-time tracking, and documentation, all in one place.',
+    a: 'A transport management system is software that helps businesses plan, execute, and track the movement of freight - covering route planning, carrier selection, real-time tracking, and documentation, all in one place.',
   },
   {
     q: 'Do small and medium businesses need a TMS, or is it only for large freight operators?',
@@ -204,7 +204,7 @@ export function TmsArticlePage() {
               Australia's freight task is enormous, and its geography doesn't make things easy. Goods often travel thousands of kilometres between capital cities, regional centres, and remote areas, which means even small inefficiencies in transport planning can quickly turn into real cost and time losses. This is exactly the problem a transport management system (TMS) is built to solve.
             </p>
             <p style={BODY}>
-              For businesses that rely on freight to keep operations running, understanding how a TMS works — and why it's become essential rather than optional — can make the difference between a supply chain that scales smoothly and one that constantly firefights delays.
+              For businesses that rely on freight to keep operations running, understanding how a TMS works - and why it's become essential rather than optional - can make the difference between a supply chain that scales smoothly and one that constantly firefights delays.
             </p>
 
             {/* TL;DR key facts */}
@@ -237,7 +237,7 @@ export function TmsArticlePage() {
             {/* Bivry approach */}
             <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>How Bivry Approaches Transport Management</h2>
             <p style={BODY}>
-              At Bivry, we built our road freight and distribution services around exactly this kind of visibility. Every shipment is tracked in real time with 24/7 GPS monitoring, backed by a strong on-time delivery record — so businesses aren't just hoping their freight arrives, they can see it happening. Combining reliable warehousing with trackable, accountable transport means fewer surprises for the businesses that depend on us to move their goods.
+              At Bivry, we built our road freight and distribution services around exactly this kind of visibility. Every shipment is tracked in real time with 24/7 GPS monitoring, backed by a strong on-time delivery record - so businesses aren't just hoping their freight arrives, they can see it happening. Combining reliable warehousing with trackable, accountable transport means fewer surprises for the businesses that depend on us to move their goods.
             </p>
             <p style={BODY}>
               Want more visibility over your freight? <InlineLink to="/contact">Talk to the Bivry team</InlineLink> about road freight and distribution solutions built for reliability across Australia, with coverage spanning <InlineLink to="/freight-company-melbourne">Melbourne</InlineLink>, <InlineLink to="/freight-company-sydney">Sydney</InlineLink>, <InlineLink to="/freight-company-brisbane">Brisbane</InlineLink>, <InlineLink to="/freight-company-perth">Perth</InlineLink>, and <InlineLink to="/freight-company-adelaide">Adelaide</InlineLink>.

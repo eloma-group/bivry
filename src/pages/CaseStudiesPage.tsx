@@ -101,7 +101,7 @@ function FeaturedStudy({ s }: { s: typeof STUDIES[0] }) {
   return (
     <section style={{ background: NAVY, padding: 'clamp(72px,9vw,120px) clamp(24px,5vw,80px)', position: 'relative', overflow: 'hidden' }}>
 
-      {/* Dot grid — fades in */}
+      {/* Dot grid - fades in */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
@@ -109,7 +109,7 @@ function FeaturedStudy({ s }: { s: typeof STUDIES[0] }) {
         style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.022) 1px, transparent 1px)', backgroundSize: '26px 26px', pointerEvents: 'none' }}
       />
 
-      {/* Ghost number — drifts in from right */}
+      {/* Ghost number - drifts in from right */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0, x: 80 }} animate={{ opacity: 1, x: 0 }}
@@ -349,7 +349,7 @@ function FleetRow({ f, idx }: { f: typeof FLEET_FEATURES[0]; idx: number }) {
         {f.num}
       </span>
 
-      {/* Icon box — spring scale on hover */}
+      {/* Icon box - spring scale on hover */}
       <motion.div
         animate={{ scale: hovered ? 1.12 : 1 }}
         transition={{ type: 'spring', stiffness: 320, damping: 22 }}
@@ -388,7 +388,7 @@ function FleetRow({ f, idx }: { f: typeof FLEET_FEATURES[0]; idx: number }) {
         </p>
       </div>
 
-      {/* Right arrow — slides in on hover */}
+      {/* Right arrow - slides in on hover */}
       <motion.span
         animate={{ opacity: hovered ? 1 : 0, x: hovered ? 0 : -10 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}

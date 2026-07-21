@@ -16,7 +16,7 @@ const BADGES = [
 
 const EASE = [0.16, 1, 0.3, 1] as [number, number, number, number]
 
-// Top-level stagger — orchestrates every block
+// Top-level stagger - orchestrates every block
 const page = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.18, delayChildren: 0.1 } },
@@ -28,7 +28,7 @@ const slideLeft = {
   visible: { opacity: 1, x: 0,  transition: { duration: 0.75, ease: EASE } },
 }
 
-// Headline container — staggers the three lines
+// Headline container - staggers the three lines
 const headGroup = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.15 } },
@@ -46,7 +46,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0,  filter: 'blur(0px)', transition: { duration: 0.85, ease: EASE } },
 }
 
-// CTA group — staggers the two buttons
+// CTA group - staggers the two buttons
 const ctaGroup = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.11 } },
@@ -56,7 +56,7 @@ const ctaItem = {
   visible: { opacity: 1, scale: 1,   y: 0,  transition: { duration: 0.65, ease: EASE } },
 }
 
-// Badge group — staggers the three cards
+// Badge group - staggers the three cards
 const badgeGroup = {
   hidden:  {},
   visible: { transition: { staggerChildren: 0.1 } },
@@ -166,7 +166,7 @@ export function Hero7({ videos = DEFAULT_VIDEO }: { videos?: string[] }) {
             </span>
           </motion.div>
 
-          {/* Headline — each line animates independently */}
+          {/* Headline - each line animates independently */}
           <motion.div variants={headGroup} style={{ marginBottom: '26px' }}>
             {HEADLINE_LINES.map(({ text, color }) => (
               <motion.div

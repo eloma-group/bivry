@@ -66,7 +66,7 @@ function CardFace({ industry, back, innerRadius }: {
         background: `radial-gradient(ellipse 85% 55% at 50% 34%, ${m.accent}18 0%, transparent 62%)`,
       }} />
 
-      {/* Icon — centred in upper ~58% */}
+      {/* Icon - centred in upper ~58% */}
       <div style={{
         flex: 1,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -247,7 +247,7 @@ function SmallCell({ icon: Icon, label, className }: { icon: React.ElementType; 
         alignItems: 'center', justifyContent: 'center',
         gap: '8px', padding: '10px 6px', userSelect: 'none',
         cursor: 'default',
-        /* inset outline — no layout shift, exactly like ClickUp Automations hover */
+        /* inset outline - no layout shift, exactly like ClickUp Automations hover */
         outline: hov ? '2px solid rgba(8,33,60,0.45)' : '2px solid transparent',
         outlineOffset: '-2px',
         transition: 'outline-color 0.15s ease',
@@ -299,7 +299,7 @@ export function Industries() {
   return (
     <section id="industries" style={{ background: '#fff', paddingTop: 'clamp(64px,9vw,110px)', paddingBottom: 'clamp(40px,5vw,60px)', overflow: 'hidden' }}>
 
-      {/* Header — padded */}
+      {/* Header - padded */}
       <motion.div
         initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-40px' }}
@@ -325,7 +325,7 @@ export function Industries() {
 
       {/* Full-width grid wrapper with left/right fade masks */}
       <div style={{ position: 'relative' }}>
-        {/* Col 1 fade (left) — covers exactly 1 column = 10% of width */}
+        {/* Col 1 fade (left) - covers exactly 1 column = 10% of width */}
         <div className="ind-fade-left" style={{
           position: 'absolute', left: 0, top: 0, bottom: 0, width: '11%', zIndex: 10,
           background: 'linear-gradient(to right, #fff 20%, transparent 100%)',
@@ -342,7 +342,7 @@ export function Industries() {
           className="ind-grid"
           style={{
             display: 'grid',
-            /* 10 equal columns — 1 col = 10vw → row height = 10vw = square cells */
+            /* 10 equal columns - 1 col = 10vw → row height = 10vw = square cells */
             gridTemplateColumns: 'repeat(10, 1fr)',
             gridAutoRows: '8vw',
             gap: '1px',

@@ -252,7 +252,7 @@ export function FAQPage() {
         <section style={{ background: '#fff', padding: 'clamp(72px,9vw,120px) clamp(24px,5vw,80px)' }}>
           <div className="faq-wrap">
 
-            {/* Section header — kept identical to original */}
+            {/* Section header - kept identical to original */}
             <div style={{
               display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 24, marginBottom: 'clamp(40px,5vw,64px)',
@@ -405,7 +405,7 @@ export function FAQPage() {
         @media (min-width: 1920px) { .faq-wrap { max-width: 1900px; } }
         @media (min-width: 2560px) { .faq-wrap { max-width: 2400px; } }
 
-        /* ── Industries arc — desktop flex ── */
+        /* ── Industries arc - desktop flex ── */
         .ind-arc {
           display: flex;
           align-items: flex-end;

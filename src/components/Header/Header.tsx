@@ -97,7 +97,7 @@ export function Header() {
         >
           {/* Logo */}
           <a href="/" style={{ flexShrink: 0, lineHeight: 0, position: 'relative', display: 'inline-block', height: '50px' }}>
-            {/* White version — visible over dark/transparent header */}
+            {/* White version - visible over dark/transparent header */}
             <img
               src="/images/bivry-logo-white.png"
               alt="BIVRY road freight and warehousing Australia logo"
@@ -112,7 +112,7 @@ export function Header() {
                 imageRendering: 'auto',
               }}
             />
-            {/* Blue version — visible over solid white header */}
+            {/* Blue version - visible over solid white header */}
             <img
               src="/images/BIVRY-blue01.png"
               alt="BIVRY road freight and warehousing Australia logo"
@@ -175,7 +175,7 @@ export function Header() {
               </div>
             ))}
 
-            {/* Toll-free number — after Contact */}
+            {/* Toll-free number - after Contact */}
             <a
               href="tel:1800054555"
               onMouseEnter={closeAll}

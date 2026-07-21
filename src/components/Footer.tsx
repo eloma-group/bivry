@@ -100,7 +100,6 @@ export function Footer() {
   /* Flatten all items from each nav section */
   const allServices   = navItems.find(n => n.label === 'Services')?.columns?.flatMap(c => c.items) ?? []
   const allIndustries = navItems.find(n => n.label === 'Industries')?.columns?.flatMap(c => c.items) ?? []
-  const whyUsItems    = navItems.find(n => n.label === 'Why Us')?.columns?.flatMap(c => c.items) ?? []
 
   return (
     <footer id="contact" style={{ background: BLUE, position: 'relative', overflow: 'hidden' }}>
@@ -136,7 +135,7 @@ export function Footer() {
             </a>
 
             <p style={{ fontSize: 13.5, color: 'rgba(255,255,255,0.42)', lineHeight: 1.7, maxWidth: 270, marginBottom: 16 }}>
-              BIVRY — Australia's trusted logistics company for road freight,
+              BIVRY - Australia's trusted logistics company for road freight,
               warehousing and distribution.
             </p>
 
@@ -159,7 +158,7 @@ export function Footer() {
 
               {/* Highlighted location */}
               <a
-                href="https://www.google.com/maps/search/?api=1&query=71+Gipps+Street+Collingwood+Melbourne+VIC+3066"
+                href="https://www.google.com/maps/dir//Bivry,+Ground+Floor%2F71+Gipps+St,+Collingwood+VIC+3066,+Australia/@25.593405,85.116814,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6ad6438748386aeb:0x1d5d2d0ffd39b78d!2m2!1d144.9899096!2d-37.804927?entry=ttu&g_ep=EgoyMDI2MDcxOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-info-box footer-location-link"
@@ -189,7 +188,7 @@ export function Footer() {
                 <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500, lineHeight: 1.65 }}>
                   Headquartered in{' '}
                   <Link to="/freight-company-melbourne" title="Freight company in Melbourne" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Melbourne</Link>
-                  {' '}(Collingwood, VIC) — serving{' '}
+                  {' '}(Collingwood, VIC) - serving{' '}
                   <Link to="/freight-company-sydney" title="Freight company in Sydney" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Sydney</Link>
                   ,{' '}
                   <Link to="/freight-company-brisbane" title="Freight company in Brisbane" className="footer-area-link" style={{ color: GREEN, fontWeight: 600, textDecoration: 'none' }}>Brisbane</Link>
@@ -280,7 +279,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* ── Industries — all 10 ── */}
+          {/* ── Industries - all 10 ── */}
           <div>
             <SectionHeading label="Industries" />
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
@@ -296,7 +295,13 @@ export function Footer() {
           <div>
             <SectionHeading label="Why Us" />
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
-              {whyUsItems.map(item => (
+              {[
+                { label: 'About Us',            href: '/about'        },
+                { label: 'Values',              href: '/values'       },
+                { label: 'Networks & Partners', href: '/networks'     },
+                { label: 'FAQ',                 href: '/faq'          },
+                { label: 'Case Studies',        href: '/case-studies' },
+              ].map(item => (
                 <li key={item.label}>
                   <FooterLink href={item.href}>{item.label}</FooterLink>
                 </li>
@@ -309,12 +314,9 @@ export function Footer() {
             <SectionHeading label="Quick Links" />
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 9 }}>
               {[
-                { label: 'About Us',       href: '/about'        },
                 { label: 'Careers',        href: '/careers'      },
-                { label: 'Case Studies',   href: '/case-studies' },
                 { label: 'Blog',           href: '/blog'         },
                 { label: 'Latest News',    href: '/news'         },
-                { label: 'FAQ',            href: '/faq'          },
                 { label: 'Contact',        href: '/contact'      },
                 { label: 'Customer Login', href: '#'             },
                 { label: 'Track Shipment', href: '#'             },
@@ -327,7 +329,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Protected by — EG Digital shield (just above divider) */}
+        {/* Protected by - EG Digital shield (just above divider) */}
         <div className="footer-protected" style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'flex-end', gap: 0, paddingBottom: 18 }}>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', paddingBottom: 16, marginRight: -14 }}>
             Protected by

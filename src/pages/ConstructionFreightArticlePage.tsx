@@ -10,7 +10,7 @@ import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
 import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+/* SEO settings - title/description shared with the prerender via PAGE_SEO */
 const SEO_TITLE = PAGE_SEO['/blog/construction-materials-delivery-freight-company-australia'].title
 const META_DESCRIPTION = PAGE_SEO['/blog/construction-materials-delivery-freight-company-australia'].description
 const KEYWORDS =
@@ -56,10 +56,10 @@ const KEY_FACTS = [
 ]
 
 const STRUCTURAL_DIFFERENCES = [
-  'Load type — steel beams, precast concrete, glass panels, and bulk aggregate need specialised vehicles and load-securing methods that standard parcel freight doesn’t touch.',
-  'Delivery windows — construction sites often have narrow access hours set by council permits or site logistics plans, unlike retail deliveries with flexible timing.',
-  'Sequencing — materials frequently need to arrive in a specific build order, so a delayed shipment can stall an entire trade, not just one delivery.',
-  'Site conditions — unsealed access roads, height restrictions, and limited unloading equipment all affect what kind of vehicle and crew a job needs.',
+  'Load type - steel beams, precast concrete, glass panels, and bulk aggregate need specialised vehicles and load-securing methods that standard parcel freight doesn’t touch.',
+  'Delivery windows - construction sites often have narrow access hours set by council permits or site logistics plans, unlike retail deliveries with flexible timing.',
+  'Sequencing - materials frequently need to arrive in a specific build order, so a delayed shipment can stall an entire trade, not just one delivery.',
+  'Site conditions - unsealed access roads, height restrictions, and limited unloading equipment all affect what kind of vehicle and crew a job needs.',
 ]
 
 const FAILURE_POINTS = [
@@ -238,7 +238,7 @@ export function ConstructionFreightArticlePage() {
           <div style={{ maxWidth: 1760, margin: '0 auto' }}>
             {/* Lead */}
             <p style={{ ...BODY, fontSize: 'clamp(17px,1.4vw,21px)', color: 'rgba(8,33,60,0.78)', fontWeight: 500 }}>
-              You choose a freight company for construction materials delivery in Australia by checking their experience with oversized and bulk loads, confirming they operate across the states your project touches, and reviewing their track record for on-time, damage-free delivery to active job sites. Construction freight carries different risks than standard parcel or pallet freight, and a mismatch here shows up fast — as delayed pours, idle crews, and blown timelines.
+              You choose a freight company for construction materials delivery in Australia by checking their experience with oversized and bulk loads, confirming they operate across the states your project touches, and reviewing their track record for on-time, damage-free delivery to active job sites. Construction freight carries different risks than standard parcel or pallet freight, and a mismatch here shows up fast - as delayed pours, idle crews, and blown timelines.
             </p>
 
             {/* TL;DR key facts */}

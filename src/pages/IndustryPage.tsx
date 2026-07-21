@@ -212,8 +212,8 @@ export function IndustryPage() {
 
   usePageTitle(
     industry
-      ? industry.metaTitle ?? `${industry.name} Freight & Logistics — BIVRY`
-      : "BIVRY — Australia's Road Freight & Logistics Company"
+      ? industry.metaTitle ?? `${industry.name} Freight & Logistics - BIVRY`
+      : "BIVRY - Australia's Road Freight & Logistics Company"
   )
 
   useMetaDescription(
@@ -253,7 +253,7 @@ export function IndustryPage() {
           <div style={{ maxWidth: 1760, margin: '0 auto' }} className="ind-overview-inner">
             <div className="ind-overview-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,96px)', alignItems: 'start' }}>
 
-              {/* Left — editorial heading */}
+              {/* Left - editorial heading */}
               <motion.div
                 initial={{ opacity: 0, x: -32 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, ease }}
@@ -279,7 +279,7 @@ export function IndustryPage() {
                 </h2>
               </motion.div>
 
-              {/* Right — body + key points */}
+              {/* Right - body + key points */}
               <motion.div
                 initial={{ opacity: 0, x: 32 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.8, ease, delay: 0.12 }}
@@ -433,7 +433,7 @@ export function IndustryPage() {
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ height: 1, background: 'rgba(255,255,255,0.06)' }} />
 
-            {/* Columns — no max-width, bleeds full width with internal padding */}
+            {/* Columns - no max-width, bleeds full width with internal padding */}
             <div className="ind-commit-row" style={{ display: 'flex' }}>
               {industry.commitments.map((c, i) => (
                 <CommitmentColumn

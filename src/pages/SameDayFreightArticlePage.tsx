@@ -10,7 +10,7 @@ import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
 import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+/* SEO settings - title/description shared with the prerender via PAGE_SEO */
 const SEO_TITLE = PAGE_SEO['/blog/same-day-delivery-vs-standard-freight'].title
 const META_DESCRIPTION = PAGE_SEO['/blog/same-day-delivery-vs-standard-freight'].description
 const KEYWORDS =
@@ -79,7 +79,7 @@ const STANDARD_USES = [
 ]
 
 const DIFFERENCES = [
-  { label: 'Delivery Speed', sameDay: 'Fastest option available — goods arrive within hours.', standard: 'Typically one or more days, depending on distance and destination.' },
+  { label: 'Delivery Speed', sameDay: 'Fastest option available - goods arrive within hours.', standard: 'Typically one or more days, depending on distance and destination.' },
   { label: 'Cost', sameDay: 'Generally costs more because dedicated resources are required.', standard: 'Often more affordable for routine, planned shipments.' },
   { label: 'Flexibility', sameDay: 'Greater flexibility for urgent requirements.', standard: 'Follows predetermined schedules and delivery routes.' },
   { label: 'Shipment Priority', sameDay: 'Urgent deliveries receive immediate attention.', standard: 'Efficient movement within planned logistics schedules.' },
@@ -267,7 +267,7 @@ export function SameDayFreightArticlePage() {
               style={{ width: '100%', height: 'clamp(200px,30vw,360px)', objectFit: 'cover', borderRadius: 16, margin: '12px 0 44px' }}
             />
 
-            {/* Key differences — comparison table */}
+            {/* Key differences - comparison table */}
             <h2 style={{ ...SECTION_TITLE }}>Key Differences</h2>
             <p style={BODY}>A side-by-side look at how the two services compare across the factors that matter most:</p>
             <div className="sd-compare" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, margin: '8px 0 28px' }}>

@@ -113,7 +113,7 @@ export function InnerHero({ badge, line1, line2, greenLine = 2, description, met
                 lineHeight: 1.35, letterSpacing: '-0.02em',
               }}>{value}</div>
 
-              {/* Bottom accent line — animates in on hover via CSS */}
+              {/* Bottom accent line - animates in on hover via CSS */}
               <div className="innerhero-meta-underline" style={{
                 position: 'absolute', bottom: 0, left: 0,
                 height: 2, width: 0,

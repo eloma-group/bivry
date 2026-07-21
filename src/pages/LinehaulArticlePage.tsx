@@ -10,7 +10,7 @@ import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
 import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+/* SEO settings - title/description shared with the prerender via PAGE_SEO */
 const SEO_TITLE = PAGE_SEO['/blog/linehaul-transport-australia'].title
 const META_DESCRIPTION = PAGE_SEO['/blog/linehaul-transport-australia'].description
 const KEYWORDS =

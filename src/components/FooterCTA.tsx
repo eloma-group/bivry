@@ -32,7 +32,7 @@ export function FooterCTA() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         flexWrap: 'wrap', gap: 32,
       }}>
-        {/* Left — copy */}
+        {/* Left - copy */}
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -67,7 +67,7 @@ export function FooterCTA() {
           </p>
         </motion.div>
 
-        {/* Right — actions */}
+        {/* Right - actions */}
         <motion.div
           initial={{ opacity: 0, x: 24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -120,7 +120,7 @@ export function FooterCTA() {
         </motion.div>
       </div>
 
-      {/* Bottom divider — merges visually with Footer */}
+      {/* Bottom divider - merges visually with Footer */}
       <div style={{ height: 1, background: 'rgba(255,255,255,0.07)' }} />
     </section>
   )

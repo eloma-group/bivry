@@ -112,7 +112,7 @@ function CultureCard({ c, idx, isLarge }: {
         transition={{ duration: 0.5 }}
       />
 
-      {/* Ghost number — scales + rotates on hover */}
+      {/* Ghost number - scales + rotates on hover */}
       <motion.div
         animate={{ scale: hov ? 1.22 : 1, rotate: hov ? 7 : 0 }}
         transition={{ duration: 0.48, ease: [0.16, 1, 0.3, 1] }}
@@ -363,7 +363,7 @@ export function ValuesPage() {
               </p>
             </div>
 
-            {/* Right: real credentials from docs — no numbers */}
+            {/* Right: real credentials from docs - no numbers */}
             <div className="promise-creds">
               {[
                 { label: 'UN Global Compact', sub: 'Participant'            },
@@ -401,7 +401,7 @@ export function ValuesPage() {
         </motion.div>
 
         {/* ══════════════════════════════════════════════
-            VALUES — editorial full-width rows
+            VALUES - editorial full-width rows
             ══════════════════════════════════════════════ */}
         <section style={{ background: '#fff' }}>
           <div className="values-inner">
@@ -412,7 +412,7 @@ export function ValuesPage() {
         </section>
 
         {/* ══════════════════════════════════════════════
-            MANIFESTO — exaggerated editorial typography
+            MANIFESTO - exaggerated editorial typography
             ══════════════════════════════════════════════ */}
         <section style={{
           background: CREAM,
@@ -452,7 +452,7 @@ export function ValuesPage() {
         </section>
 
         {/* ══════════════════════════════════════════════
-            HOW WE WORK — light bento layout
+            HOW WE WORK - light bento layout
             ══════════════════════════════════════════════ */}
         <section style={{
           background: '#f0ede8',
@@ -514,7 +514,7 @@ export function ValuesPage() {
 
       <style>{`
         /* ══════════════════════════════════════
-           INNER CONTAINER — all section wrappers
+           INNER CONTAINER - all section wrappers
            ══════════════════════════════════════ */
         .values-inner {
           max-width: 1760px;

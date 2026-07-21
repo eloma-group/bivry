@@ -27,13 +27,13 @@ const SITE_DEFAULT_DESCRIPTION =
 /** Route path (as registered in App.tsx) → SEO title + meta description. */
 export const PAGE_SEO: Record<string, PageSeo> = {
   '/': {
-    title: "BIVRY — Australia's Road Freight & Logistics Company",
+    title: "BIVRY - Australia's Road Freight & Logistics Company",
     h1: 'Road Freight, Warehousing & Distribution Across Australia',
     description: SITE_DEFAULT_DESCRIPTION,
   },
   '/about': {
     title: "About Bivry | Australia's Logistics Experts",
-    h1: "Australia's trusted road freight and logistics network — built for reliability, speed and GPS-tracked delivery.",
+    h1: "Australia's trusted road freight and logistics network - built for reliability, speed and GPS-tracked delivery.",
     description:
       'Learn about Bivry, our logistics expertise, industry experience and commitment to delivering reliable freight solutions across Australia.',
   },
@@ -86,13 +86,13 @@ export const PAGE_SEO: Record<string, PageSeo> = {
       'Contact Bivry for freight, logistics and supply chain solutions. Speak with our team for tailored transport services Australia-wide.',
   },
   '/terms-of-use': {
-    title: 'Terms of Use — BIVRY',
+    title: 'Terms of Use - BIVRY',
     h1: 'Terms of Use',
     description:
       'Read the terms of use governing your access to and use of the Bivry website and our freight and logistics services.',
   },
   '/privacy-policy': {
-    title: 'Privacy Policy — BIVRY',
+    title: 'Privacy Policy - BIVRY',
     h1: 'Privacy Policy',
     description:
       'Learn how Bivry collects, uses and protects your personal information across our website and freight and logistics services.',

@@ -126,7 +126,7 @@ export function NewsPage() {
               style={{ borderRadius: 24, overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', display: 'grid', gridTemplateColumns: '1fr 360px' }}
               className="news-featured-card"
             >
-              {/* LEFT — cream panel */}
+              {/* LEFT - cream panel */}
               <div style={{ background: CREAM, padding: 'clamp(40px,4vw,64px)', display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', top: -20, right: -12, fontSize: 'clamp(80px,14vw,200px)', fontWeight: 900, color: 'rgba(8,33,60,0.04)', letterSpacing: '-0.05em', lineHeight: 1, pointerEvents: 'none', userSelect: 'none' }}>01</div>
 
@@ -156,7 +156,7 @@ export function NewsPage() {
                 <p style={{ fontSize: 'clamp(14px,1.15vw,17px)', color: 'rgba(8,33,60,0.55)', lineHeight: 1.88, margin: 0, flex: 1, position: 'relative', zIndex: 1 }}>{NEWS[0].excerpt}</p>
               </div>
 
-              {/* RIGHT — dark panel */}
+              {/* RIGHT - dark panel */}
               <div style={{ background: '#061828', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 'clamp(32px,3vw,48px)' }}>
                 <div style={{ position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 32px)', pointerEvents: 'none' }} />
                 <div style={{ position: 'absolute', bottom: -80, right: -80, width: 280, height: 280, borderRadius: '50%', background: `radial-gradient(circle, ${GREEN}22 0%, transparent 65%)`, pointerEvents: 'none' }} />

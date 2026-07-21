@@ -10,7 +10,7 @@ import { useMetaDescription } from '../hooks/useMetaDescription'
 import { useCanonical } from '../hooks/useCanonical'
 import { PAGE_SEO } from '../data/seo'
 
-/* SEO settings — title/description shared with the prerender via PAGE_SEO */
+/* SEO settings - title/description shared with the prerender via PAGE_SEO */
 const SEO_TITLE = PAGE_SEO['/blog/freight-broker-vs-direct-carrier-melbourne'].title
 const META_DESCRIPTION = PAGE_SEO['/blog/freight-broker-vs-direct-carrier-melbourne'].description
 const KEYWORDS =
@@ -87,10 +87,10 @@ const CARRIER_TRAITS = [
 ]
 
 const COMPARISON = [
-  { factor: 'Owns the trucks', broker: 'No — outsources to carrier network', carrier: 'Yes — operates its own fleet' },
+  { factor: 'Owns the trucks', broker: 'No - outsources to carrier network', carrier: 'Yes - operates its own fleet' },
   { factor: 'Pricing', broker: 'Carrier rate + broker margin', carrier: 'Direct carrier rate' },
   { factor: 'Accountability for delays', broker: 'Shared between broker and carrier', carrier: 'Sits directly with the carrier' },
-  { factor: 'Network reach', broker: 'Broad — access to many carriers', carrier: "Limited to the carrier's own routes/fleet" },
+  { factor: 'Network reach', broker: 'Broad - access to many carriers', carrier: "Limited to the carrier's own routes/fleet" },
   { factor: 'Tracking accuracy', broker: 'Depends on the carrier they book', carrier: 'Direct, real-time visibility' },
   { factor: 'Best for', broker: 'Irregular, niche, or overflow freight', carrier: 'Regular freight needing consistency' },
 ]
@@ -123,7 +123,7 @@ const TAKEAWAYS = [
   'Brokers offer broader network access; direct carriers offer tighter accountability and tracking accuracy.',
   "Regular, predictable freight is usually better served by a direct carrier; irregular or overflow freight often benefits from a broker's network.",
   'A logistics service provider that owns its fleet and freight management systems can deliver broker-level flexibility with carrier-level accountability.',
-  'Always compare measurable service standards — on-time delivery rate and tracking visibility — before choosing either model.',
+  'Always compare measurable service standards - on-time delivery rate and tracking visibility - before choosing either model.',
 ]
 
 const FAQS = [
@@ -141,7 +141,7 @@ const FAQS = [
   },
   {
     q: "What's the main risk of using a freight broker?",
-    a: 'The main risk is inconsistent service, since the broker isn’t the one executing delivery — quality depends entirely on which carrier they book for that shipment, and it can change load to load.',
+    a: 'The main risk is inconsistent service, since the broker isn’t the one executing delivery - quality depends entirely on which carrier they book for that shipment, and it can change load to load.',
   },
   {
     q: 'Should a growing business use a broker or a direct carrier for freight management?',
@@ -251,12 +251,12 @@ export function FreightBrokerArticlePage() {
           <div style={{ maxWidth: 1760, margin: '0 auto' }}>
             {/* Lead */}
             <p style={{ ...BODY, fontSize: 'clamp(17px,1.4vw,21px)', color: 'rgba(8,33,60,0.78)', fontWeight: 500 }}>
-              Choosing how your freight actually moves — through a broker's network or a carrier's own trucks — shapes your costs, your visibility, and who is accountable when something goes wrong. Here's how the two models really compare, and how to match the right one to your business.
+              Choosing how your freight actually moves - through a broker's network or a carrier's own trucks - shapes your costs, your visibility, and who is accountable when something goes wrong. Here's how the two models really compare, and how to match the right one to your business.
             </p>
 
             {/* TL;DR key facts */}
             <div style={{ background: '#fff', borderRadius: 18, border: '1px solid rgba(8,33,60,0.07)', padding: 'clamp(24px,3vw,36px)', margin: '8px 0 44px' }}>
-              <h2 style={{ fontSize: 16, fontWeight: 800, color: GREEN, margin: '0 0 18px', textTransform: 'uppercase', letterSpacing: '1px' }}>TL;DR — Key Facts</h2>
+              <h2 style={{ fontSize: 16, fontWeight: 800, color: GREEN, margin: '0 0 18px', textTransform: 'uppercase', letterSpacing: '1px' }}>TL;DR - Key Facts</h2>
               <CheckList items={KEY_FACTS} />
             </div>
 
@@ -270,7 +270,7 @@ export function FreightBrokerArticlePage() {
             {/* What is a direct carrier */}
             <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>What Is a Direct Carrier?</h2>
             <p style={BODY}>
-              A direct carrier is a transport company that owns and operates its own fleet, drivers, and delivery infrastructure to move your freight itself. Because the carrier controls every stage of the shipment, there's no third party between the booking and the truck — which is why direct carriers are often chosen for freight management that depends on consistency and direct accountability. Bivry's <InlineServiceLink serviceId="interstate">road freight and logistics services</InlineServiceLink> are a working example of this model.
+              A direct carrier is a transport company that owns and operates its own fleet, drivers, and delivery infrastructure to move your freight itself. Because the carrier controls every stage of the shipment, there's no third party between the booking and the truck - which is why direct carriers are often chosen for freight management that depends on consistency and direct accountability. Bivry's <InlineServiceLink serviceId="interstate">road freight and logistics services</InlineServiceLink> are a working example of this model.
             </p>
             <CheckList items={CARRIER_TRAITS} />
 
@@ -325,14 +325,14 @@ export function FreightBrokerArticlePage() {
             {/* Melbourne businesses */}
             <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>Why Do Melbourne Businesses Use a Freight Broker Instead of a Direct Carrier?</h2>
             <p style={BODY}>
-              Melbourne businesses often turn to a freight broker when they need access to capacity or routes outside a single carrier's network — particularly for one-off interstate runs, seasonal spikes, or specialised freight types. Melbourne's position as one of Australia's busiest freight corridors (heavy Melbourne–Sydney and Melbourne–Brisbane lanes) means capacity can tighten quickly during peak periods, and a broker's multi-carrier network can absorb that volume when a single carrier can't.
+              Melbourne businesses often turn to a freight broker when they need access to capacity or routes outside a single carrier's network - particularly for one-off interstate runs, seasonal spikes, or specialised freight types. Melbourne's position as one of Australia's busiest freight corridors (heavy Melbourne–Sydney and Melbourne–Brisbane lanes) means capacity can tighten quickly during peak periods, and a broker's multi-carrier network can absorb that volume when a single carrier can't.
             </p>
             <p style={BODY}>
-              The trade-off is that service quality varies by which carrier the broker books on any given day — so a freight broker Melbourne shippers use for overflow capacity isn't always the right fit for freight that needs consistent, measurable service standards like on-time percentage and live GPS tracking.
+              The trade-off is that service quality varies by which carrier the broker books on any given day - so a freight broker Melbourne shippers use for overflow capacity isn't always the right fit for freight that needs consistent, measurable service standards like on-time percentage and live GPS tracking.
             </p>
 
             {/* Which is better */}
-            <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>Which Is Better for Your Business — a Freight Broker or a Direct Carrier?</h2>
+            <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>Which Is Better for Your Business - a Freight Broker or a Direct Carrier?</h2>
             <p style={BODY}>
               Neither option is universally better; the right choice depends on how predictable your freight volume is and how much direct control you need over delivery outcomes. Use the breakdown below to match the model to your shipping pattern.
             </p>
@@ -344,10 +344,10 @@ export function FreightBrokerArticlePage() {
             {/* Combining both */}
             <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>How Does a Logistics Service Provider Combine Both Advantages?</h2>
             <p style={BODY}>
-              A full-service logistics service provider closes the gap between the two models by owning its fleet and freight management systems while still offering the route coverage and service flexibility businesses usually go to a broker for. This is the model Bivry operates on: rather than outsourcing your freight to a rotating pool of third-party carriers, Bivry moves it directly through its own <InlineServiceLink serviceId="interstate">road freight services</InlineServiceLink> — with 96.2% on-time delivery and 24/7 GPS tracking as measurable proof of service consistency, not a marketing claim you have to take on faith.
+              A full-service logistics service provider closes the gap between the two models by owning its fleet and freight management systems while still offering the route coverage and service flexibility businesses usually go to a broker for. This is the model Bivry operates on: rather than outsourcing your freight to a rotating pool of third-party carriers, Bivry moves it directly through its own <InlineServiceLink serviceId="interstate">road freight services</InlineServiceLink> - with 96.2% on-time delivery and 24/7 GPS tracking as measurable proof of service consistency, not a marketing claim you have to take on faith.
             </p>
             <p style={BODY}>
-              For businesses that have relied on brokers mainly for reliability concerns with a previous direct carrier, a provider that combines its own fleet with dependable freight management — backed by <InlineServiceLink serviceId="warehousing">warehousing and distribution</InlineServiceLink> under one roof — can offer the best of both: direct accountability without sacrificing service coverage.
+              For businesses that have relied on brokers mainly for reliability concerns with a previous direct carrier, a provider that combines its own fleet with dependable freight management - backed by <InlineServiceLink serviceId="warehousing">warehousing and distribution</InlineServiceLink> under one roof - can offer the best of both: direct accountability without sacrificing service coverage.
             </p>
 
             {/* Key takeaways */}
