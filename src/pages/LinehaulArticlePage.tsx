@@ -76,20 +76,20 @@ const PROVIDER_CRITERIA = [
 
 const FAQS = [
   {
-    q: 'What is line haul transport?',
+    q: 'What is linehaul transport?',
     a: 'Linehaul transport is the long-haul transport of cargo between major cities, transportation points, and distribution centers.',
   },
   {
-    q: 'How is line haul transport different from local deliveries?',
-    a: 'Line haul transport is concerned with long-distance and interstate freight transport, whereas local deliveries handle last mile deliveries.',
+    q: 'How is linehaul transport different from local deliveries?',
+    a: 'Linehaul transport is concerned with long-distance and interstate freight transport, whereas local deliveries handle last mile deliveries.',
   },
   {
-    q: 'What kinds of industries rely on line haul freight?',
-    a: 'Line haul freight transport services are popular among retailers, eCommerce, manufacturing, health care, construction, and FMCG companies.',
+    q: 'What kinds of industries rely on linehaul freight?',
+    a: 'Linehaul freight transport services are popular among retailers, eCommerce, manufacturing, health care, construction, and FMCG companies.',
   },
   {
-    q: 'Is line haul transport cost-effective?',
-    a: 'Yes. Freight consolidation and scheduled line haul transport routes make line haul transport cost-effective.',
+    q: 'Is linehaul transport cost-effective?',
+    a: 'Yes. Freight consolidation and scheduled linehaul transport routes make linehaul transport cost-effective.',
   },
 ]
 

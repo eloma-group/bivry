@@ -35,9 +35,9 @@ const POSTS: Post[] = [
     category: 'Logistics',
     date: '23 July 2026',
     readTime: '4 min',
-    title: 'Line Haul or Local Freight? How to Choose the Right Delivery Option for Your Business',
-    excerpt: "Line haul moves bulk stock over long distances between hubs; local freight completes the final delivery to the customer. We break down the differences in distance, purpose, and scheduling - and explain why most Australian businesses need both, with a partner who can manage the handover smoothly.",
-    tags: ['Line Haul', 'Local Freight', 'Distribution'],
+    title: 'Linehaul or Local Freight? How to Choose the Right Delivery Option for Your Business',
+    excerpt: "Linehaul moves bulk stock over long distances between hubs; local freight completes the final delivery to the customer. We break down the differences in distance, purpose, and scheduling - and explain why most Australian businesses need both, with a partner who can manage the handover smoothly.",
+    tags: ['Linehaul', 'Local Freight', 'Distribution'],
     slug: '/blog/line-haul-vs-local-freight',
   },
   {

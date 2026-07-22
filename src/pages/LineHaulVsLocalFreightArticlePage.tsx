@@ -14,12 +14,12 @@ import { PAGE_SEO } from '../data/seo'
 const SEO_TITLE = PAGE_SEO['/blog/line-haul-vs-local-freight'].title
 const META_DESCRIPTION = PAGE_SEO['/blog/line-haul-vs-local-freight'].description
 const KEYWORDS =
-  'line haul delivery, local freight Australia, interstate freight, last mile delivery, road freight and distribution'
+  'linehaul delivery, local freight Australia, interstate freight, last mile delivery, road freight and distribution'
 
 const CATEGORY = 'Logistics'
 const DATE = '23 July 2026'
 const READ_TIME = '4 min'
-const TAGS = ['Line Haul', 'Local Freight', 'Distribution']
+const TAGS = ['Linehaul', 'Local Freight', 'Distribution']
 
 /* Shared inline-link style for internal route links */
 function InlineLink({ to, children }: { to: string; children: React.ReactNode }) {
@@ -58,23 +58,23 @@ const BODY: React.CSSProperties = {
 }
 
 const KEY_FACTS = [
-  'Line haul is the long-distance movement of freight between major hubs - the backbone of interstate freight in Australia.',
+  'Linehaul is the long-distance movement of freight between major hubs - the backbone of interstate freight in Australia.',
   'Local freight covers the final leg, getting goods from a regional hub or depot to the actual customer.',
-  'Line haul runs on fixed, consolidated schedules; local freight is far more flexible for same-day and time-critical requests.',
-  'Most Australian businesses use both - goods move via line haul between hubs, then transfer to local freight for final delivery.',
+  'Linehaul runs on fixed, consolidated schedules; local freight is far more flexible for same-day and time-critical requests.',
+  'Most Australian businesses use both - goods move via linehaul between hubs, then transfer to local freight for final delivery.',
   'The real question is whether your freight partner can manage that handover smoothly, without visibility gaps.',
 ]
 
 const KEY_DIFFERENCES = [
-  'Distance - line haul covers interstate and regional distances; local freight handles short trips within a city or local area.',
-  'Purpose - line haul moves bulk stock between hubs; local freight completes the final delivery to the customer.',
-  'Scheduling - line haul runs on fixed, consolidated schedules; local freight is far more flexible for same-day and time-critical requests.',
+  'Distance - linehaul covers interstate and regional distances; local freight handles short trips within a city or local area.',
+  'Purpose - linehaul moves bulk stock between hubs; local freight completes the final delivery to the customer.',
+  'Scheduling - linehaul runs on fixed, consolidated schedules; local freight is far more flexible for same-day and time-critical requests.',
 ]
 
 const FAQS = [
   {
-    q: "What's the main difference between line haul and local freight?",
-    a: 'Line haul covers long-distance transport between hubs, usually interstate. Local freight covers the shorter final delivery to the customer.',
+    q: "What's the main difference between linehaul and local freight?",
+    a: 'Linehaul covers long-distance transport between hubs, usually interstate. Local freight covers the shorter final delivery to the customer.',
   },
   {
     q: 'Can one provider handle both?',
@@ -82,7 +82,7 @@ const FAQS = [
   },
   {
     q: 'How do I know which service I need?',
-    a: 'Moving bulk stock between hubs is line haul. Delivering directly to a customer nearby, especially with tight timing, is local freight. Most businesses use both.',
+    a: 'Moving bulk stock between hubs is linehaul. Delivering directly to a customer nearby, especially with tight timing, is local freight. Most businesses use both.',
   },
 ]
 
@@ -159,7 +159,7 @@ export function LineHaulVsLocalFreightArticlePage() {
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease }}
               style={{ fontSize: 'clamp(32px,4.6vw,60px)', fontWeight: 900, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.04, margin: '0 0 24px', textTransform: 'uppercase' }}
             >
-              Line Haul or Local Freight? How to Choose the <span style={{ color: GREEN }}>Right Delivery Option</span>
+              Linehaul or Local Freight? How to Choose the <span style={{ color: GREEN }}>Right Delivery Option</span>
             </motion.h1>
 
             {/* Tags */}
@@ -177,7 +177,7 @@ export function LineHaulVsLocalFreightArticlePage() {
             <motion.img
               initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, ease }}
               src="/images/bivry-truck-highway.jpg"
-              alt="A Bivry line haul truck on an Australian highway, moving bulk freight between distribution hubs"
+              alt="A Bivry linehaul truck on an Australian highway, moving bulk freight between distribution hubs"
               style={{ width: '100%', height: 'clamp(240px,38vw,460px)', objectFit: 'cover', borderRadius: 20, boxShadow: '0 30px 80px rgba(0,0,0,0.35)', display: 'block' }}
             />
           </div>
@@ -188,7 +188,7 @@ export function LineHaulVsLocalFreightArticlePage() {
           <div style={{ maxWidth: 1760, margin: '0 auto' }}>
             {/* Lead */}
             <p style={{ ...BODY, fontSize: 'clamp(17px,1.4vw,21px)', color: 'rgba(8,33,60,0.78)', fontWeight: 500 }}>
-              Ask most business owners how their goods get from a warehouse to a customer's door, and you'll usually get a vague answer - "a truck picks it up and it arrives." In reality, that journey is almost always made up of two very different types of freight movement: line haul delivery and local freight. Knowing when to use each is one of the simplest ways to keep freight costs under control.
+              Ask most business owners how their goods get from a warehouse to a customer's door, and you'll usually get a vague answer - "a truck picks it up and it arrives." In reality, that journey is almost always made up of two very different types of freight movement: linehaul delivery and local freight. Knowing when to use each is one of the simplest ways to keep freight costs under control.
             </p>
 
             {/* TL;DR key facts */}
@@ -197,10 +197,10 @@ export function LineHaulVsLocalFreightArticlePage() {
               <CheckList items={KEY_FACTS} />
             </div>
 
-            {/* What is line haul */}
-            <h2 style={SECTION_TITLE}>What Is Line Haul Delivery?</h2>
+            {/* What is linehaul */}
+            <h2 style={SECTION_TITLE}>What Is Linehaul Delivery?</h2>
             <p style={BODY}>
-              Line haul is the long-distance movement of freight between major hubs - capital cities, regional distribution centres, or warehouses hundreds of kilometres apart. It's the backbone of interstate freight in Australia, built around fixed schedules and consolidated loads, best suited to bulk stock transfers rather than one-off, time-sensitive deliveries.
+              Linehaul is the long-distance movement of freight between major hubs - capital cities, regional distribution centres, or warehouses hundreds of kilometres apart. It's the backbone of interstate freight in Australia, built around fixed schedules and consolidated loads, best suited to bulk stock transfers rather than one-off, time-sensitive deliveries.
             </p>
 
             {/* What is local freight */}
@@ -219,7 +219,7 @@ export function LineHaulVsLocalFreightArticlePage() {
             {/* Which option */}
             <h2 style={{ ...SECTION_TITLE, marginTop: 48 }}>So Which Option Does Your Business Need?</h2>
             <p style={BODY}>
-              For most Australian businesses, the honest answer is both. Goods typically move via line haul between hubs, then transfer to local freight for final delivery. The real question is whether your freight partner can manage that handover smoothly - a reality reflected in national freight data published by the <ExternalLink href="https://www.bitre.gov.au/">Bureau of Infrastructure and Transport Research Economics</ExternalLink>.
+              For most Australian businesses, the honest answer is both. Goods typically move via linehaul between hubs, then transfer to local freight for final delivery. The real question is whether your freight partner can manage that handover smoothly - a reality reflected in national freight data published by the <ExternalLink href="https://www.bitre.gov.au/">Bureau of Infrastructure and Transport Research Economics</ExternalLink>.
             </p>
 
             {/* How Bivry bridges the gap */}
