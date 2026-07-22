@@ -129,4 +129,10 @@ export const PAGE_SEO: Record<string, PageSeo> = {
     description:
       'Discover why a transport management system is essential for freight businesses in Australia, and how it improves visibility, cost control and delivery reliability.',
   },
+  '/blog/line-haul-vs-local-freight': {
+    title: 'Line Haul vs Local Freight: Which Delivery Option Do You Need? | Bivry',
+    h1: 'Line Haul or Local Freight? How to Choose the Right Delivery Option for Your Business',
+    description:
+      'Line haul moves bulk freight between hubs; local freight handles final delivery to the customer. Compare distance, purpose and scheduling to choose the right option for your business.',
+  },
 }

@@ -81,6 +81,8 @@ export function Hero8({ videos = ['/hero-merged.mp4'] }: { videos?: string[] }) 
         onEnded={isSequence ? () => setClip((c) => (c + 1) % videos.length) : undefined}
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
       >
+        {/* Prefer the smaller VP9 WebM; browsers fall back to MP4 when unsupported */}
+        <source src={(isSequence ? videos[clip] : videos[0]).replace(/\.mp4$/, '.webm')} type="video/webm" />
         <source src={isSequence ? videos[clip] : videos[0]} type="video/mp4" />
       </video>
 
